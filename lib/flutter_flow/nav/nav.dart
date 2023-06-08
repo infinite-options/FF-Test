@@ -51,16 +51,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'Background',
           path: '/background',
           builder: (context, params) => BackgroundWidget(),
-        ),
-        FFRoute(
-          name: 'OnboardSlide2',
-          path: '/onboardSlide2',
-          builder: (context, params) => OnboardSlide2Widget(),
-        ),
-        FFRoute(
-          name: 'OnboardSlide1',
-          path: '/onboardSlide1',
-          builder: (context, params) => OnboardSlide1Widget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

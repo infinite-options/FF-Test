@@ -52,7 +52,7 @@ class _MeetUpHomePageWidgetState extends State<MeetUpHomePageWidget> {
                 hoverColor: Colors.transparent,
                 highlightColor: Colors.transparent,
                 onTap: () async {
-                  context.pushNamed('OnboardSlide1');
+                  context.pushNamed('null');
                 },
                 child: Container(
                   width: double.infinity,
