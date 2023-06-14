@@ -51,6 +51,21 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'Background',
           path: '/background',
           builder: (context, params) => BackgroundWidget(),
+        ),
+        FFRoute(
+          name: 'APICallTest',
+          path: '/aPICallTest',
+          builder: (context, params) => APICallTestWidget(),
+        ),
+        FFRoute(
+          name: 'APITest',
+          path: '/aPITest',
+          builder: (context, params) => APITestWidget(),
+        ),
+        FFRoute(
+          name: 'APIExample',
+          path: '/aPIExample',
+          builder: (context, params) => APIExampleWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
