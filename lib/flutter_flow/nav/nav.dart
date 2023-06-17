@@ -66,6 +66,166 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'APIExample',
           path: '/aPIExample',
           builder: (context, params) => APIExampleWidget(),
+        ),
+        FFRoute(
+          name: 'onboarding_slide1',
+          path: '/onboardingSlide1',
+          builder: (context, params) => OnboardingSlide1Widget(),
+        ),
+        FFRoute(
+          name: 'onboarding_slide2',
+          path: '/onboardingSlide2',
+          builder: (context, params) => OnboardingSlide2Widget(),
+        ),
+        FFRoute(
+          name: 'onboarding_slide3',
+          path: '/onboardingSlide3',
+          builder: (context, params) => OnboardingSlide3Widget(),
+        ),
+        FFRoute(
+          name: 'onboarding_slide4',
+          path: '/onboardingSlide4',
+          builder: (context, params) => OnboardingSlide4Widget(),
+        ),
+        FFRoute(
+          name: 'Page1',
+          path: '/page1',
+          builder: (context, params) => Page1Widget(),
+        ),
+        FFRoute(
+          name: 'Page2',
+          path: '/page2',
+          builder: (context, params) => Page2Widget(),
+        ),
+        FFRoute(
+          name: 'Page3',
+          path: '/page3',
+          builder: (context, params) => Page3Widget(),
+        ),
+        FFRoute(
+          name: 'Page4',
+          path: '/page4',
+          builder: (context, params) => Page4Widget(),
+        ),
+        FFRoute(
+          name: 'Page5',
+          path: '/page5',
+          builder: (context, params) => Page5Widget(),
+        ),
+        FFRoute(
+          name: 'ProfilePage1',
+          path: '/profilePage1',
+          builder: (context, params) => ProfilePage1Widget(),
+        ),
+        FFRoute(
+          name: 'ProfilePage2',
+          path: '/profilePage2',
+          builder: (context, params) => ProfilePage2Widget(),
+        ),
+        FFRoute(
+          name: 'ProfilePage3',
+          path: '/profilePage3',
+          builder: (context, params) => ProfilePage3Widget(),
+        ),
+        FFRoute(
+          name: 'ProfilePage4',
+          path: '/profilePage4',
+          builder: (context, params) => ProfilePage4Widget(),
+        ),
+        FFRoute(
+          name: 'ProfilePage5',
+          path: '/profilePage5',
+          builder: (context, params) => ProfilePage5Widget(),
+        ),
+        FFRoute(
+          name: 'ProfilePage6',
+          path: '/profilePage6',
+          builder: (context, params) => ProfilePage6Widget(),
+        ),
+        FFRoute(
+          name: 'ProfilePage7',
+          path: '/profilePage7',
+          builder: (context, params) => ProfilePage7Widget(),
+        ),
+        FFRoute(
+          name: 'ProfilePage8',
+          path: '/profilePage8',
+          builder: (context, params) => ProfilePage8Widget(),
+        ),
+        FFRoute(
+          name: 'ProfilePage9',
+          path: '/profilePage9',
+          builder: (context, params) => ProfilePage9Widget(),
+        ),
+        FFRoute(
+          name: 'ProfilePage10',
+          path: '/profilePage10',
+          builder: (context, params) => ProfilePage10Widget(),
+        ),
+        FFRoute(
+          name: 'ProfilePage11',
+          path: '/profilePage11',
+          builder: (context, params) => ProfilePage11Widget(),
+        ),
+        FFRoute(
+          name: 'Settings1',
+          path: '/settings1',
+          builder: (context, params) => Settings1Widget(),
+        ),
+        FFRoute(
+          name: 'Settings2',
+          path: '/settings2',
+          builder: (context, params) => Settings2Widget(),
+        ),
+        FFRoute(
+          name: 'Settings3',
+          path: '/settings3',
+          builder: (context, params) => Settings3Widget(),
+        ),
+        FFRoute(
+          name: 'Settings4',
+          path: '/settings4',
+          builder: (context, params) => Settings4Widget(),
+        ),
+        FFRoute(
+          name: 'Settings4Copy',
+          path: '/settings4Copy',
+          builder: (context, params) => Settings4CopyWidget(),
+        ),
+        FFRoute(
+          name: 'LetsMeet1',
+          path: '/letsMeet1',
+          builder: (context, params) => LetsMeet1Widget(),
+        ),
+        FFRoute(
+          name: 'LetsMeet2',
+          path: '/letsMeet2',
+          builder: (context, params) => LetsMeet2Widget(),
+        ),
+        FFRoute(
+          name: 'LetsMeet3',
+          path: '/letsMeet3',
+          builder: (context, params) => LetsMeet3Widget(),
+        ),
+        FFRoute(
+          name: 'LetsMeet4',
+          path: '/letsMeet4',
+          builder: (context, params) => LetsMeet4Widget(),
+        ),
+        FFRoute(
+          name: 'Welcome1',
+          path: '/welcome1',
+          builder: (context, params) => Welcome1Widget(),
+        ),
+        FFRoute(
+          name: 'Welcome2',
+          path: '/welcome2',
+          builder: (context, params) => Welcome2Widget(),
+        ),
+        FFRoute(
+          name: 'Welcome3',
+          path: '/welcome3',
+          builder: (context, params) => Welcome3Widget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
