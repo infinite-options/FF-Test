@@ -346,6 +346,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'Frame74',
           path: '/frame74',
           builder: (context, params) => Frame74Widget(),
+        ),
+        FFRoute(
+          name: 'AccountSetup1Create',
+          path: '/accountSetup1Create',
+          builder: (context, params) => AccountSetup1CreateWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

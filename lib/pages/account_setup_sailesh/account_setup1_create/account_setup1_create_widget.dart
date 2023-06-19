@@ -1,35 +1,38 @@
 import '/auth/firebase_auth/auth_util.dart';
+import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'account_setup1_model.dart';
-export 'account_setup1_model.dart';
+import 'account_setup1_create_model.dart';
+export 'account_setup1_create_model.dart';
 
-class AccountSetup1Widget extends StatefulWidget {
-  const AccountSetup1Widget({Key? key}) : super(key: key);
+class AccountSetup1CreateWidget extends StatefulWidget {
+  const AccountSetup1CreateWidget({Key? key}) : super(key: key);
 
   @override
-  _AccountSetup1WidgetState createState() => _AccountSetup1WidgetState();
+  _AccountSetup1CreateWidgetState createState() =>
+      _AccountSetup1CreateWidgetState();
 }
 
-class _AccountSetup1WidgetState extends State<AccountSetup1Widget> {
-  late AccountSetup1Model _model;
+class _AccountSetup1CreateWidgetState extends State<AccountSetup1CreateWidget> {
+  late AccountSetup1CreateModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => AccountSetup1Model());
+    _model = createModel(context, () => AccountSetup1CreateModel());
 
     _model.emailController ??=
         TextEditingController(text: 'Lachlan@konnectdigital.io');
     _model.passwordController ??=
+        TextEditingController(text: '. . . . . . . . . .');
+    _model.confirmPasswordController ??=
         TextEditingController(text: '. . . . . . . . . .');
   }
 
@@ -251,92 +254,78 @@ class _AccountSetup1WidgetState extends State<AccountSetup1Widget> {
                     ),
                   ),
                 ),
-                Row(
-                  mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Align(
-                      alignment: AlignmentDirectional(0.02, 0.19),
-                      child: FFButtonWidget(
-                        onPressed: () async {
-                          GoRouter.of(context).prepareAuthEvent();
-
-                          final user = await authManager.signInWithEmail(
-                            context,
-                            _model.emailController.text,
-                            _model.passwordController.text,
-                          );
-                          if (user == null) {
-                            return;
-                          }
-
-                          context.goNamedAuth(
-                              'MeetUpHomePage', context.mounted);
-                        },
-                        text: 'Login',
-                        options: FFButtonOptions(
-                          width: 131.0,
-                          height: 43.0,
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              0.0, 0.0, 0.0, 0.0),
-                          iconPadding: EdgeInsetsDirectional.fromSTEB(
-                              0.0, 0.0, 0.0, 0.0),
-                          color: Color(0xFFE4423F),
-                          textStyle:
-                              FlutterFlowTheme.of(context).titleSmall.override(
-                                    fontFamily: 'Lexend',
-                                    color: Colors.white,
-                                    fontSize: 18.0,
-                                    fontWeight: FontWeight.normal,
-                                  ),
-                          elevation: 3.0,
+                Align(
+                  alignment: AlignmentDirectional(0.0, 0.18),
+                  child: Padding(
+                    padding:
+                        EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+                    child: TextFormField(
+                      controller: _model.confirmPasswordController,
+                      autofocus: true,
+                      obscureText: !_model.confirmPasswordVisibility,
+                      decoration: InputDecoration(
+                        labelText: 'Confirm Password',
+                        labelStyle:
+                            FlutterFlowTheme.of(context).labelMedium.override(
+                                  fontFamily: 'Lexend',
+                                  color: Color(0xFFE4423F),
+                                  fontSize: 18.0,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                        hintStyle: FlutterFlowTheme.of(context).labelMedium,
+                        enabledBorder: OutlineInputBorder(
                           borderSide: BorderSide(
-                            color: Colors.transparent,
-                            width: 1.0,
+                            color: Color(0xFFE2E2E2),
+                            width: 2.0,
                           ),
-                          borderRadius: BorderRadius.circular(828.0),
+                          borderRadius: BorderRadius.circular(10.0),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                            color: FlutterFlowTheme.of(context).primary,
+                            width: 2.0,
+                          ),
+                          borderRadius: BorderRadius.circular(10.0),
+                        ),
+                        errorBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                            color: FlutterFlowTheme.of(context).error,
+                            width: 2.0,
+                          ),
+                          borderRadius: BorderRadius.circular(10.0),
+                        ),
+                        focusedErrorBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                            color: FlutterFlowTheme.of(context).error,
+                            width: 2.0,
+                          ),
+                          borderRadius: BorderRadius.circular(10.0),
+                        ),
+                        filled: true,
+                        fillColor: Color(0xFFE2E2E2),
+                        contentPadding: EdgeInsetsDirectional.fromSTEB(
+                            10.0, 0.0, 10.0, 0.0),
+                        suffixIcon: InkWell(
+                          onTap: () => setState(
+                            () => _model.confirmPasswordVisibility =
+                                !_model.confirmPasswordVisibility,
+                          ),
+                          focusNode: FocusNode(skipTraversal: true),
+                          child: Icon(
+                            _model.confirmPasswordVisibility
+                                ? Icons.visibility_outlined
+                                : Icons.visibility_off_outlined,
+                            size: 22,
+                          ),
                         ),
                       ),
+                      style: FlutterFlowTheme.of(context).bodyMedium.override(
+                            fontFamily: 'Lexend',
+                          ),
+                      validator: _model.confirmPasswordControllerValidator
+                          .asValidator(context),
                     ),
-                  ],
-                ),
-                Row(
-                  mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Align(
-                      alignment: AlignmentDirectional(-0.12, 0.3),
-                      child: RichText(
-                        text: TextSpan(
-                          children: [
-                            TextSpan(
-                              text: 'Forgot Password? ',
-                              style: FlutterFlowTheme.of(context)
-                                  .bodyMedium
-                                  .override(
-                                    fontFamily: 'DM Sans',
-                                    color: Colors.black,
-                                    fontWeight: FontWeight.normal,
-                                  ),
-                            ),
-                            TextSpan(
-                              text: 'Retrieve here',
-                              style: GoogleFonts.getFont(
-                                'DM Sans',
-                                color: Color(0xFFE4423F),
-                                fontSize: 14.0,
-                              ),
-                            )
-                          ],
-                          style:
-                              FlutterFlowTheme.of(context).bodyMedium.override(
-                                    fontFamily: 'DM Sans',
-                                  ),
-                        ),
-                      ),
-                    ),
-                  ],
+                  ),
                 ),
                 Align(
                   alignment: AlignmentDirectional(0.16, 0.42),
@@ -387,42 +376,77 @@ class _AccountSetup1WidgetState extends State<AccountSetup1Widget> {
                     ),
                   ],
                 ),
-                Row(
-                  mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Align(
-                      alignment: AlignmentDirectional(-0.05, 0.83),
-                      child: FFButtonWidget(
-                        onPressed: () async {
-                          context.pushNamed('AccountSetup1Create');
-                        },
-                        text: 'Create Profile',
-                        options: FFButtonOptions(
-                          width: 202.0,
-                          height: 43.0,
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              0.0, 0.0, 0.0, 0.0),
-                          iconPadding: EdgeInsetsDirectional.fromSTEB(
-                              0.0, 0.0, 0.0, 0.0),
-                          color: Color(0xFFE4423F),
-                          textStyle:
-                              FlutterFlowTheme.of(context).titleSmall.override(
-                                    fontFamily: 'Readex Pro',
-                                    color: Colors.white,
-                                    fontSize: 18.0,
-                                    fontWeight: FontWeight.normal,
+                Align(
+                  alignment: AlignmentDirectional(0.0, 0.0),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.max,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Align(
+                        alignment: AlignmentDirectional(-0.05, 0.83),
+                        child: FFButtonWidget(
+                          onPressed: () async {
+                            GoRouter.of(context).prepareAuthEvent();
+                            if (_model.passwordController.text !=
+                                _model.confirmPasswordController.text) {
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                SnackBar(
+                                  content: Text(
+                                    'Passwords don\'t match!',
                                   ),
-                          elevation: 0.0,
-                          borderSide: BorderSide(
-                            color: Colors.transparent,
-                            width: 1.0,
+                                ),
+                              );
+                              return;
+                            }
+
+                            final user =
+                                await authManager.createAccountWithEmail(
+                              context,
+                              _model.emailController.text,
+                              _model.passwordController.text,
+                            );
+                            if (user == null) {
+                              return;
+                            }
+
+                            final usersCreateData = createUsersRecordData(
+                              email: '',
+                            );
+                            await UsersRecord.collection
+                                .doc(user.uid)
+                                .update(usersCreateData);
+
+                            context.pushNamedAuth(
+                                'Accountsetup2', context.mounted);
+                          },
+                          text: 'Create Profile',
+                          options: FFButtonOptions(
+                            width: 202.0,
+                            height: 43.0,
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                0.0, 0.0, 0.0, 0.0),
+                            iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                0.0, 0.0, 0.0, 0.0),
+                            color: Color(0xFFE4423F),
+                            textStyle: FlutterFlowTheme.of(context)
+                                .titleSmall
+                                .override(
+                                  fontFamily: 'Readex Pro',
+                                  color: Colors.white,
+                                  fontSize: 18.0,
+                                  fontWeight: FontWeight.normal,
+                                ),
+                            elevation: 0.0,
+                            borderSide: BorderSide(
+                              color: Colors.transparent,
+                              width: 1.0,
+                            ),
+                            borderRadius: BorderRadius.circular(28.0),
                           ),
-                          borderRadius: BorderRadius.circular(28.0),
                         ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
                 FFButtonWidget(
                   onPressed: () {

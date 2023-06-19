@@ -83,3 +83,5 @@ export '/pullup_menu_sailesh/frame71/frame71_widget.dart' show Frame71Widget;
 export '/pullup_menu_sailesh/frame72/frame72_widget.dart' show Frame72Widget;
 export '/pullup_menu_sailesh/frame73/frame73_widget.dart' show Frame73Widget;
 export '/pullup_menu_sailesh/frame74/frame74_widget.dart' show Frame74Widget;
+export '/pages/account_setup_sailesh/account_setup1_create/account_setup1_create_widget.dart'
+    show AccountSetup1CreateWidget;
