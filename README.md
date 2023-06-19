@@ -1,4 +1,4 @@
-# Meet Up App - PM1
+# MeetMeUp
 
 A new Flutter project.
 
