@@ -308,8 +308,8 @@ class _AccountSetup1WidgetState extends State<AccountSetup1Widget> {
                   ),
                 ),
                 FFButtonWidget(
-                  onPressed: () async {
-                    context.pushNamed('null');
+                  onPressed: () {
+                    print('Button pressed ...');
                   },
                   text: 'Button',
                   options: FFButtonOptions(

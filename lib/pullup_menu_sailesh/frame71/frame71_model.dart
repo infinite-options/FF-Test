@@ -9,18 +9,13 @@ class Frame71Model extends FlutterFlowModel {
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();
-  // State field(s) for ListView widget.
-  ScrollController? listViewController;
 
   /// Initialization and disposal methods.
 
-  void initState(BuildContext context) {
-    listViewController = ScrollController();
-  }
+  void initState(BuildContext context) {}
 
   void dispose() {
     unfocusNode.dispose();
-    listViewController?.dispose();
   }
 
   /// Action blocks are added here.
