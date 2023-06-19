@@ -5,13 +5,12 @@ Future initFirebase() async {
   if (kIsWeb) {
     await Firebase.initializeApp(
         options: FirebaseOptions(
-            apiKey: "AIzaSyD3L-IuhwFrVRQW0VlAUErkbuqB3KNJMaU",
-            authDomain: "meet-up-app-c55c8.firebaseapp.com",
-            projectId: "meet-up-app-c55c8",
-            storageBucket: "meet-up-app-c55c8.appspot.com",
-            messagingSenderId: "617427266679",
-            appId: "1:617427266679:web:5c4a3f2151758b630c6a72",
-            measurementId: "G-060S0HK345"));
+            apiKey: "AIzaSyCGFXb1p2XyjE-o7N6eUBcnW5WqAVPhWMY",
+            authDomain: "meetmeup-69349.firebaseapp.com",
+            projectId: "meetmeup-69349",
+            storageBucket: "meetmeup-69349.appspot.com",
+            messagingSenderId: "466541803518",
+            appId: "1:466541803518:web:4003fdfe739cc5804632af"));
   } else {
     await Firebase.initializeApp();
   }

@@ -40,21 +40,6 @@ class _OnboardingSlide4WidgetState extends State<OnboardingSlide4Widget> {
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
-        appBar: AppBar(
-          backgroundColor: FlutterFlowTheme.of(context).primary,
-          automaticallyImplyLeading: false,
-          title: Text(
-            'Page Title',
-            style: FlutterFlowTheme.of(context).headlineMedium.override(
-                  fontFamily: 'Outfit',
-                  color: Colors.white,
-                  fontSize: 22.0,
-                ),
-          ),
-          actions: [],
-          centerTitle: false,
-          elevation: 2.0,
-        ),
         body: SafeArea(
           top: true,
           child: Column(
@@ -90,9 +75,13 @@ class _OnboardingSlide4WidgetState extends State<OnboardingSlide4Widget> {
                           ),
                           TextSpan(
                             text: 'precious ',
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                            ),
+                            style: FlutterFlowTheme.of(context)
+                                .bodyMedium
+                                .override(
+                                  fontFamily: 'Readex Pro',
+                                  fontSize: 20.0,
+                                  fontWeight: FontWeight.bold,
+                                ),
                           ),
                           TextSpan(
                             text: 'in \n',
@@ -112,6 +101,7 @@ class _OnboardingSlide4WidgetState extends State<OnboardingSlide4Widget> {
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               fontFamily: 'Lexend',
                               fontSize: 20.0,
+                              fontWeight: FontWeight.w300,
                             ),
                       ),
                       textAlign: TextAlign.center,
@@ -152,14 +142,14 @@ class _OnboardingSlide4WidgetState extends State<OnboardingSlide4Widget> {
                                   fontFamily: 'Readex Pro',
                                   color:
                                       FlutterFlowTheme.of(context).primaryText,
-                                  fontSize: 18.0,
+                                  fontSize: 22.0,
                                   fontWeight: FontWeight.bold,
                                 ),
                           )
                         ],
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               fontFamily: 'Lexend',
-                              fontSize: 18.0,
+                              fontSize: 22.0,
                               fontWeight: FontWeight.bold,
                             ),
                       ),
@@ -178,9 +168,11 @@ class _OnboardingSlide4WidgetState extends State<OnboardingSlide4Widget> {
                       ),
                       TextSpan(
                         text: 'compliments ',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
+                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                              fontFamily: 'Readex Pro',
+                              fontSize: 16.0,
+                              fontWeight: FontWeight.bold,
+                            ),
                       ),
                       TextSpan(
                         text: 'you.',
@@ -189,6 +181,8 @@ class _OnboardingSlide4WidgetState extends State<OnboardingSlide4Widget> {
                     ],
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'Lexend',
+                          fontSize: 16.0,
+                          fontWeight: FontWeight.w300,
                         ),
                   ),
                   textAlign: TextAlign.center,
@@ -213,7 +207,7 @@ class _OnboardingSlide4WidgetState extends State<OnboardingSlide4Widget> {
                             EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                         iconPadding:
                             EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                        color: Color(0xFFEF4639),
+                        color: Color(0xFFE4423F),
                         textStyle:
                             FlutterFlowTheme.of(context).titleSmall.override(
                                   fontFamily: 'Lexend',
@@ -239,13 +233,22 @@ class _OnboardingSlide4WidgetState extends State<OnboardingSlide4Widget> {
                   Padding(
                     padding:
                         EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 48.0),
-                    child: Text(
-                      'Skip >',
-                      textAlign: TextAlign.center,
-                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily: 'Readex Pro',
-                            fontWeight: FontWeight.w900,
-                          ),
+                    child: InkWell(
+                      splashColor: Colors.transparent,
+                      focusColor: Colors.transparent,
+                      hoverColor: Colors.transparent,
+                      highlightColor: Colors.transparent,
+                      onTap: () async {
+                        context.pushNamed('TrailAccountPage1');
+                      },
+                      child: Text(
+                        'Skip >',
+                        textAlign: TextAlign.center,
+                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                              fontFamily: 'Readex Pro',
+                              fontWeight: FontWeight.w900,
+                            ),
+                      ),
                     ),
                   ),
                 ],

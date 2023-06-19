@@ -1,48 +1,76 @@
 {
   "project_info": {
-    "project_number": "617427266679",
-    "project_id": "meet-up-app-c55c8",
-    "storage_bucket": "meet-up-app-c55c8.appspot.com"
+    "project_number": "466541803518",
+    "project_id": "meetmeup-69349",
+    "storage_bucket": "meetmeup-69349.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:617427266679:android:62d6edcaaed64b950c6a72",
+        "mobilesdk_app_id": "1:466541803518:android:34982b4c68947f854632af",
         "android_client_info": {
-          "package_name": "com.mycompany.meetupapppm1"
+          "package_name": "com.mycompany.authentication"
         }
       },
       "oauth_client": [
         {
-          "client_id": "617427266679-i71vhr64jrch2st2ao4mv8s4jeupubb8.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.mycompany.meetupapppm1",
-            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
-          }
-        },
-        {
-          "client_id": "617427266679-dpr5kjpko2p5n4anfe4emq3hv44j5fon.apps.googleusercontent.com",
+          "client_id": "466541803518-gsnmbth4efjiajdpl1i9c2phrlu81njq.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBHOJ-Itsafi3rYmL5EIOGBe3o2k34_ENM"
+          "current_key": "AIzaSyBRyXvA-8pvPIFZft5yEAbICAXU0C8Wj4w"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "617427266679-dpr5kjpko2p5n4anfe4emq3hv44j5fon.apps.googleusercontent.com",
+              "client_id": "466541803518-gsnmbth4efjiajdpl1i9c2phrlu81njq.apps.googleusercontent.com",
               "client_type": 3
             },
             {
-              "client_id": "617427266679-4c03chslpi4g7qu066oc56j5rhijsfiu.apps.googleusercontent.com",
+              "client_id": "466541803518-nt9flfdbtaj2cfl3lv26suhfo79eifti.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "com.mycompany.meetupapppm1"
+                "bundle_id": "com.mycompany.authentication"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:466541803518:android:8749a9fe54bf38224632af",
+        "android_client_info": {
+          "package_name": "com.mycompany.meetupapppm1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "466541803518-gsnmbth4efjiajdpl1i9c2phrlu81njq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBRyXvA-8pvPIFZft5yEAbICAXU0C8Wj4w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "466541803518-gsnmbth4efjiajdpl1i9c2phrlu81njq.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "466541803518-nt9flfdbtaj2cfl3lv26suhfo79eifti.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.mycompany.authentication"
               }
             }
           ]

@@ -146,37 +146,60 @@ class _OnboardingSlide2WidgetState extends State<OnboardingSlide2Widget> {
                               ),
                               TextSpan(
                                 text: 'that ',
-                                style: TextStyle(
-                                  fontWeight: FontWeight.normal,
-                                  fontSize: 18.0,
-                                ),
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyMedium
+                                    .override(
+                                      fontFamily: 'Readex Pro',
+                                      fontSize: 18.0,
+                                      fontWeight: FontWeight.w300,
+                                    ),
                               ),
                               TextSpan(
                                 text: 'awkwardness \n',
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                ),
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyMedium
+                                    .override(
+                                      fontFamily: 'Readex Pro',
+                                      fontSize: 18.0,
+                                      fontWeight: FontWeight.bold,
+                                    ),
                               ),
                               TextSpan(
                                 text: 'asking for ',
-                                style: TextStyle(),
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyMedium
+                                    .override(
+                                      fontFamily: 'Readex Pro',
+                                      fontSize: 18.0,
+                                      fontWeight: FontWeight.w300,
+                                    ),
                               ),
                               TextSpan(
                                 text: 'the first date',
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                ),
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyMedium
+                                    .override(
+                                      fontFamily: 'Readex Pro',
+                                      fontSize: 18.0,
+                                      fontWeight: FontWeight.bold,
+                                    ),
                               ),
                               TextSpan(
                                 text: '. ',
-                                style: TextStyle(),
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyMedium
+                                    .override(
+                                      fontFamily: 'Readex Pro',
+                                      fontSize: 18.0,
+                                      fontWeight: FontWeight.w300,
+                                    ),
                               )
                             ],
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .override(
                                   fontFamily: 'Lexend',
-                                  fontSize: 20.0,
+                                  fontSize: 18.0,
                                 ),
                           ),
                           textAlign: TextAlign.center,
@@ -192,8 +215,8 @@ class _OnboardingSlide2WidgetState extends State<OnboardingSlide2Widget> {
                         padding:
                             EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 0.0),
                         child: FFButtonWidget(
-                          onPressed: () {
-                            print('Button pressed ...');
+                          onPressed: () async {
+                            context.pushNamed('onboarding_slide3');
                           },
                           text: 'Let\'s Start',
                           options: FFButtonOptions(
@@ -203,7 +226,7 @@ class _OnboardingSlide2WidgetState extends State<OnboardingSlide2Widget> {
                                 0.0, 0.0, 0.0, 0.0),
                             iconPadding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
-                            color: Color(0xFFEF4639),
+                            color: Color(0xFFE4423F),
                             textStyle: FlutterFlowTheme.of(context)
                                 .titleSmall
                                 .override(
@@ -230,14 +253,24 @@ class _OnboardingSlide2WidgetState extends State<OnboardingSlide2Widget> {
                       Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(
                             0.0, 20.0, 0.0, 48.0),
-                        child: Text(
-                          'Skip >',
-                          textAlign: TextAlign.center,
-                          style:
-                              FlutterFlowTheme.of(context).bodyMedium.override(
-                                    fontFamily: 'Readex Pro',
-                                    fontWeight: FontWeight.w900,
-                                  ),
+                        child: InkWell(
+                          splashColor: Colors.transparent,
+                          focusColor: Colors.transparent,
+                          hoverColor: Colors.transparent,
+                          highlightColor: Colors.transparent,
+                          onTap: () async {
+                            context.pushNamed('TrailAccountPage1');
+                          },
+                          child: Text(
+                            'Skip >',
+                            textAlign: TextAlign.center,
+                            style: FlutterFlowTheme.of(context)
+                                .bodyMedium
+                                .override(
+                                  fontFamily: 'Readex Pro',
+                                  fontWeight: FontWeight.w900,
+                                ),
+                          ),
                         ),
                       ),
                     ],

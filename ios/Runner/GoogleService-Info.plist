@@ -3,23 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>617427266679-4c03chslpi4g7qu066oc56j5rhijsfiu.apps.googleusercontent.com</string>
+	<string>466541803518-ur8u555m5r13jem3eunrpfcp647prvei.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.617427266679-4c03chslpi4g7qu066oc56j5rhijsfiu</string>
-	<key>ANDROID_CLIENT_ID</key>
-	<string>617427266679-i71vhr64jrch2st2ao4mv8s4jeupubb8.apps.googleusercontent.com</string>
+	<string>com.googleusercontent.apps.466541803518-ur8u555m5r13jem3eunrpfcp647prvei</string>
 	<key>API_KEY</key>
-	<string>AIzaSyBPCAZQ5mSJ4NgclceVFO8NSXwzMEcvkEY</string>
+	<string>AIzaSyChfiwgGCzlEoCD7KexXNcGesi8DF8sIUg</string>
 	<key>GCM_SENDER_ID</key>
-	<string>617427266679</string>
+	<string>466541803518</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.mycompany.meetupapppm1</string>
 	<key>PROJECT_ID</key>
-	<string>meet-up-app-c55c8</string>
+	<string>meetmeup-69349</string>
 	<key>STORAGE_BUCKET</key>
-	<string>meet-up-app-c55c8.appspot.com</string>
+	<string>meetmeup-69349.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -31,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:617427266679:ios:64be26d6c43702f00c6a72</string>
+	<string>1:466541803518:ios:cd768f78d78a320d4632af</string>
 </dict>
 </plist>

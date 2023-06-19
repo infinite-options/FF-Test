@@ -6,25 +6,26 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'page1_model.dart';
-export 'page1_model.dart';
+import 'trail_account_page1_model.dart';
+export 'trail_account_page1_model.dart';
 
-class Page1Widget extends StatefulWidget {
-  const Page1Widget({Key? key}) : super(key: key);
+class TrailAccountPage1Widget extends StatefulWidget {
+  const TrailAccountPage1Widget({Key? key}) : super(key: key);
 
   @override
-  _Page1WidgetState createState() => _Page1WidgetState();
+  _TrailAccountPage1WidgetState createState() =>
+      _TrailAccountPage1WidgetState();
 }
 
-class _Page1WidgetState extends State<Page1Widget> {
-  late Page1Model _model;
+class _TrailAccountPage1WidgetState extends State<TrailAccountPage1Widget> {
+  late TrailAccountPage1Model _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => Page1Model());
+    _model = createModel(context, () => TrailAccountPage1Model());
   }
 
   @override

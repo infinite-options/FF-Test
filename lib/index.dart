@@ -14,7 +14,8 @@ export '/pages/onboarding_abhi/onboarding_slide3/onboarding_slide3_widget.dart'
     show OnboardingSlide3Widget;
 export '/pages/onboarding_abhi/onboarding_slide4/onboarding_slide4_widget.dart'
     show OnboardingSlide4Widget;
-export '/pages/mini_demo_abhi/page1/page1_widget.dart' show Page1Widget;
+export '/pages/mini_demo_abhi/trail_account_page1/trail_account_page1_widget.dart'
+    show TrailAccountPage1Widget;
 export '/pages/mini_demo_abhi/page2/page2_widget.dart' show Page2Widget;
 export '/pages/mini_demo_abhi/page3/page3_widget.dart' show Page3Widget;
 export '/pages/mini_demo_abhi/page4/page4_widget.dart' show Page4Widget;
