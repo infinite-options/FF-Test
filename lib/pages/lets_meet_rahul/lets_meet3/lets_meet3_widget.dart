@@ -85,7 +85,7 @@ class _LetsMeet3WidgetState extends State<LetsMeet3Widget> {
                             buttonSize: 40.0,
                             fillColor: Color(0xFFEDEDED),
                             icon: Icon(
-                              FFIcons.k758,
+                              Icons.chevron_left_sharp,
                               color: Color(0xFF333333),
                               size: 24.0,
                             ),

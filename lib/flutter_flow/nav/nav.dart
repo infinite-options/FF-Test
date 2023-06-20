@@ -288,9 +288,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => Accountsetup2Widget(),
         ),
         FFRoute(
-          name: 'Accountsetup3_notcompleted',
-          path: '/accountsetup3Notcompleted',
-          builder: (context, params) => Accountsetup3NotcompletedWidget(),
+          name: 'Accountsetup3',
+          path: '/accountsetup3',
+          builder: (context, params) => Accountsetup3Widget(),
         ),
         FFRoute(
           name: 'Accountsetup4',
@@ -328,11 +328,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => Frame70Widget(),
         ),
         FFRoute(
-          name: 'Frame71',
-          path: '/frame71',
-          builder: (context, params) => Frame71Widget(),
-        ),
-        FFRoute(
           name: 'Frame72',
           path: '/frame72',
           builder: (context, params) => Frame72Widget(),
@@ -351,6 +346,56 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'AccountSetup1Create',
           path: '/accountSetup1Create',
           builder: (context, params) => AccountSetup1CreateWidget(),
+        ),
+        FFRoute(
+          name: 'Frame71',
+          path: '/frame71',
+          builder: (context, params) => Frame71Widget(),
+        ),
+        FFRoute(
+          name: 'Frame75',
+          path: '/frame75',
+          builder: (context, params) => Frame75Widget(),
+        ),
+        FFRoute(
+          name: 'Frame76',
+          path: '/frame76',
+          builder: (context, params) => Frame76Widget(),
+        ),
+        FFRoute(
+          name: 'Frame77',
+          path: '/frame77',
+          builder: (context, params) => Frame77Widget(),
+        ),
+        FFRoute(
+          name: 'Frame79',
+          path: '/frame79',
+          builder: (context, params) => Frame79Widget(),
+        ),
+        FFRoute(
+          name: 'Frame80',
+          path: '/frame80',
+          builder: (context, params) => Frame80Widget(),
+        ),
+        FFRoute(
+          name: 'Frame81',
+          path: '/frame81',
+          builder: (context, params) => Frame81Widget(),
+        ),
+        FFRoute(
+          name: 'Frame82',
+          path: '/frame82',
+          builder: (context, params) => Frame82Widget(),
+        ),
+        FFRoute(
+          name: 'Frame83',
+          path: '/frame83',
+          builder: (context, params) => Frame83Widget(),
+        ),
+        FFRoute(
+          name: 'Frame84',
+          path: '/frame84',
+          builder: (context, params) => Frame84Widget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

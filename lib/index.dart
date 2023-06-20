@@ -28,10 +28,8 @@ export '/pages/profile_abhi/profile_page3/profile_page3_widget.dart'
     show ProfilePage3Widget;
 export '/pages/profile_abhi/profile_page4/profile_page4_widget.dart'
     show ProfilePage4Widget;
-export '/pages/profile_abhi/profile_page5/profile_page5_widget.dart'
-    show ProfilePage5Widget;
-export '/pages/profile_abhi/profile_page6/profile_page6_widget.dart'
-    show ProfilePage6Widget;
+export '/pages/profile_page5/profile_page5_widget.dart' show ProfilePage5Widget;
+export '/pages/profile_page6/profile_page6_widget.dart' show ProfilePage6Widget;
 export '/pages/profile_abhi/profile_page7/profile_page7_widget.dart'
     show ProfilePage7Widget;
 export '/pages/profile_abhi/profile_page8/profile_page8_widget.dart'
@@ -69,8 +67,8 @@ export '/pages/account_setup_sailesh/accountsetup5/accountsetup5_widget.dart'
     show Accountsetup5Widget;
 export '/pages/account_setup_sailesh/accountsetup2/accountsetup2_widget.dart'
     show Accountsetup2Widget;
-export '/pages/account_setup_sailesh/accountsetup3_notcompleted/accountsetup3_notcompleted_widget.dart'
-    show Accountsetup3NotcompletedWidget;
+export '/pages/account_setup_sailesh/accountsetup3/accountsetup3_widget.dart'
+    show Accountsetup3Widget;
 export '/pages/account_setup_sailesh/accountsetup4/accountsetup4_widget.dart'
     show Accountsetup4Widget;
 export '/video_sailesh/frame87/frame87_widget.dart' show Frame87Widget;
@@ -79,9 +77,18 @@ export '/video_sailesh/frame116/frame116_widget.dart' show Frame116Widget;
 export '/video_sailesh/frame117/frame117_widget.dart' show Frame117Widget;
 export '/pullup_menu_sailesh/frame69/frame69_widget.dart' show Frame69Widget;
 export '/pullup_menu_sailesh/frame70/frame70_widget.dart' show Frame70Widget;
-export '/pullup_menu_sailesh/frame71/frame71_widget.dart' show Frame71Widget;
 export '/pullup_menu_sailesh/frame72/frame72_widget.dart' show Frame72Widget;
 export '/pullup_menu_sailesh/frame73/frame73_widget.dart' show Frame73Widget;
 export '/pullup_menu_sailesh/frame74/frame74_widget.dart' show Frame74Widget;
 export '/pages/account_setup_sailesh/account_setup1_create/account_setup1_create_widget.dart'
     show AccountSetup1CreateWidget;
+export '/pullup_menu_sailesh/frame71/frame71_widget.dart' show Frame71Widget;
+export '/pullup_menu_sailesh/frame75/frame75_widget.dart' show Frame75Widget;
+export '/pullup_menu_sailesh/frame76/frame76_widget.dart' show Frame76Widget;
+export '/pullup_menu_sailesh/frame77/frame77_widget.dart' show Frame77Widget;
+export '/pullup_menu_sailesh/frame79/frame79_widget.dart' show Frame79Widget;
+export '/pullup_menu_sailesh/frame80/frame80_widget.dart' show Frame80Widget;
+export '/pullup_menu_sailesh/frame81/frame81_widget.dart' show Frame81Widget;
+export '/pullup_menu_sailesh/frame82/frame82_widget.dart' show Frame82Widget;
+export '/pullup_menu_sailesh/frame83/frame83_widget.dart' show Frame83Widget;
+export '/pullup_menu_sailesh/frame84/frame84_widget.dart' show Frame84Widget;

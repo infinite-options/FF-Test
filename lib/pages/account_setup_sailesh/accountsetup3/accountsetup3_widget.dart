@@ -6,25 +6,25 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'profile_page5_model.dart';
-export 'profile_page5_model.dart';
+import 'accountsetup3_model.dart';
+export 'accountsetup3_model.dart';
 
-class ProfilePage5Widget extends StatefulWidget {
-  const ProfilePage5Widget({Key? key}) : super(key: key);
+class Accountsetup3Widget extends StatefulWidget {
+  const Accountsetup3Widget({Key? key}) : super(key: key);
 
   @override
-  _ProfilePage5WidgetState createState() => _ProfilePage5WidgetState();
+  _Accountsetup3WidgetState createState() => _Accountsetup3WidgetState();
 }
 
-class _ProfilePage5WidgetState extends State<ProfilePage5Widget> {
-  late ProfilePage5Model _model;
+class _Accountsetup3WidgetState extends State<Accountsetup3Widget> {
+  late Accountsetup3Model _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => ProfilePage5Model());
+    _model = createModel(context, () => Accountsetup3Model());
   }
 
   @override
@@ -41,21 +41,6 @@ class _ProfilePage5WidgetState extends State<ProfilePage5Widget> {
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
-        appBar: AppBar(
-          backgroundColor: FlutterFlowTheme.of(context).primary,
-          automaticallyImplyLeading: false,
-          title: Text(
-            'Page Title',
-            style: FlutterFlowTheme.of(context).headlineMedium.override(
-                  fontFamily: 'Outfit',
-                  color: Colors.white,
-                  fontSize: 22.0,
-                ),
-          ),
-          actions: [],
-          centerTitle: false,
-          elevation: 2.0,
-        ),
         body: SafeArea(
           top: true,
           child: SingleChildScrollView(
@@ -104,7 +89,7 @@ class _ProfilePage5WidgetState extends State<ProfilePage5Widget> {
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .override(
-                                  fontFamily: 'Open Sans',
+                                  fontFamily: 'Lexend',
                                   fontSize: 22.0,
                                 ),
                           ),
@@ -168,7 +153,7 @@ class _ProfilePage5WidgetState extends State<ProfilePage5Widget> {
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
-                                      fontFamily: 'Open Sans',
+                                      fontFamily: 'Lexend',
                                       color: FlutterFlowTheme.of(context)
                                           .primaryText,
                                       fontSize: 18.0,
@@ -177,14 +162,14 @@ class _ProfilePage5WidgetState extends State<ProfilePage5Widget> {
                               ),
                               TextSpan(
                                 text:
-                                    'These details are about you and will be public to potential matches on meet me up.\n\nBe as open and honest as you would like, matches love to hear about you.',
+                                    'This is a short 30 second to 5 minute video to tell us \na bit about who you are and what you like.\n\nBe as open and honest as you would like, matches love\nto hear about you.',
                                 style: TextStyle(),
                               )
                             ],
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .override(
-                                  fontFamily: 'Open Sans',
+                                  fontFamily: 'DM Sans',
                                 ),
                           ),
                           textAlign: TextAlign.start,
@@ -317,11 +302,11 @@ class _ProfilePage5WidgetState extends State<ProfilePage5Widget> {
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 10.0, 0.0, 0.0, 0.0),
                             child: Text(
-                              'Why do we need your location ?',
+                              'Why do I need to make this video?',
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
-                                    fontFamily: 'Open Sans',
+                                    fontFamily: 'DM Sans',
                                   ),
                             ),
                           ),
@@ -345,7 +330,7 @@ class _ProfilePage5WidgetState extends State<ProfilePage5Widget> {
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
-                                      fontFamily: 'Open Sans',
+                                      fontFamily: 'Lexend',
                                       color: FlutterFlowTheme.of(context)
                                           .primaryText,
                                       fontSize: 18.0,
@@ -354,14 +339,17 @@ class _ProfilePage5WidgetState extends State<ProfilePage5Widget> {
                               ),
                               TextSpan(
                                 text:
-                                    'Upload some complimentary images to help give a face to your personality.',
-                                style: TextStyle(),
+                                    'Upload some complimentary images to help give a \nface to your personality.',
+                                style: GoogleFonts.getFont(
+                                  'DM Sans',
+                                  fontSize: 14.0,
+                                ),
                               )
                             ],
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .override(
-                                  fontFamily: 'Open Sans',
+                                  fontFamily: 'DM Sans',
                                 ),
                           ),
                           textAlign: TextAlign.start,
@@ -382,9 +370,10 @@ class _ProfilePage5WidgetState extends State<ProfilePage5Widget> {
                       size: 15.0,
                     ),
                     options: FFButtonOptions(
-                      height: 40.0,
+                      width: 140.0,
+                      height: 43.0,
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       iconPadding:
                           EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       color: Colors.black,
@@ -399,7 +388,7 @@ class _ProfilePage5WidgetState extends State<ProfilePage5Widget> {
                         color: Colors.transparent,
                         width: 1.0,
                       ),
-                      borderRadius: BorderRadius.circular(1000.0),
+                      borderRadius: BorderRadius.circular(31.0),
                     ),
                   ),
                 ),
@@ -423,24 +412,37 @@ class _ProfilePage5WidgetState extends State<ProfilePage5Widget> {
                             ),
                           ),
                           alignment: AlignmentDirectional(1.0, -1.0),
-                          child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
-                                0.0, 10.0, 10.0, 0.0),
-                            child: FlutterFlowIconButton(
-                              borderColor: Colors.transparent,
-                              borderRadius: 20.0,
-                              borderWidth: 1.0,
-                              buttonSize: 40.0,
-                              fillColor: Color(0xFFCECECE),
-                              icon: Icon(
-                                Icons.add,
-                                color: FlutterFlowTheme.of(context).primaryText,
-                                size: 24.0,
+                          child: Stack(
+                            children: [
+                              ClipRRect(
+                                borderRadius: BorderRadius.circular(8.0),
+                                child: Image.asset(
+                                  'assets/images/64095064087__BB1860DF-7C0C-40C7-BDAA-EAD2AD17AB6C.png',
+                                  width: 300.0,
+                                  height: 200.0,
+                                  fit: BoxFit.cover,
+                                ),
                               ),
-                              onPressed: () {
-                                print('IconButton pressed ...');
-                              },
-                            ),
+                              Align(
+                                alignment: AlignmentDirectional(0.78, -0.83),
+                                child: FlutterFlowIconButton(
+                                  borderColor: Color(0xFFCECECE),
+                                  borderRadius: 20.0,
+                                  borderWidth: 1.0,
+                                  buttonSize: 40.0,
+                                  fillColor: Color(0xFFEDEDED),
+                                  icon: Icon(
+                                    FFIcons.k718,
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryText,
+                                    size: 16.0,
+                                  ),
+                                  onPressed: () {
+                                    print('IconButton pressed ...');
+                                  },
+                                ),
+                              ),
+                            ],
                           ),
                         ),
                       ),
@@ -459,24 +461,37 @@ class _ProfilePage5WidgetState extends State<ProfilePage5Widget> {
                             ),
                           ),
                           alignment: AlignmentDirectional(1.0, -1.0),
-                          child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
-                                0.0, 10.0, 10.0, 0.0),
-                            child: FlutterFlowIconButton(
-                              borderColor: Colors.transparent,
-                              borderRadius: 20.0,
-                              borderWidth: 1.0,
-                              buttonSize: 40.0,
-                              fillColor: Color(0xFFCECECE),
-                              icon: Icon(
-                                Icons.add,
-                                color: FlutterFlowTheme.of(context).primaryText,
-                                size: 24.0,
+                          child: Stack(
+                            children: [
+                              ClipRRect(
+                                borderRadius: BorderRadius.circular(8.0),
+                                child: Image.asset(
+                                  'assets/images/IMG_2800.png',
+                                  width: 300.0,
+                                  height: 200.0,
+                                  fit: BoxFit.cover,
+                                ),
                               ),
-                              onPressed: () {
-                                print('IconButton pressed ...');
-                              },
-                            ),
+                              Align(
+                                alignment: AlignmentDirectional(0.9, -0.83),
+                                child: FlutterFlowIconButton(
+                                  borderColor: Color(0xFFCECECE),
+                                  borderRadius: 20.0,
+                                  borderWidth: 1.0,
+                                  buttonSize: 40.0,
+                                  fillColor: Color(0xFFEDEDED),
+                                  icon: Icon(
+                                    FFIcons.k718,
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryText,
+                                    size: 16.0,
+                                  ),
+                                  onPressed: () {
+                                    print('IconButton pressed ...');
+                                  },
+                                ),
+                              ),
+                            ],
                           ),
                         ),
                       ),
@@ -527,8 +542,8 @@ class _ProfilePage5WidgetState extends State<ProfilePage5Widget> {
                     },
                     text: 'Next',
                     options: FFButtonOptions(
-                      width: 130.0,
-                      height: 45.0,
+                      width: 124.0,
+                      height: 43.0,
                       padding:
                           EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       iconPadding:
@@ -536,10 +551,10 @@ class _ProfilePage5WidgetState extends State<ProfilePage5Widget> {
                       color: Color(0xFFE4423F),
                       textStyle:
                           FlutterFlowTheme.of(context).titleSmall.override(
-                                fontFamily: 'Open Sans',
+                                fontFamily: 'Lexend',
                                 color: Colors.white,
                                 fontSize: 18.0,
-                                fontWeight: FontWeight.w300,
+                                fontWeight: FontWeight.normal,
                               ),
                       elevation: 3.0,
                       borderSide: BorderSide(

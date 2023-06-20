@@ -56,7 +56,7 @@ class _Frame70WidgetState extends State<Frame70Widget> {
               Align(
                 alignment: AlignmentDirectional(0.0, 1.6),
                 child: Container(
-                  width: 414.0,
+                  width: 467.0,
                   height: 550.0,
                   decoration: BoxDecoration(
                     color: FlutterFlowTheme.of(context).secondaryBackground,
@@ -70,7 +70,7 @@ class _Frame70WidgetState extends State<Frame70Widget> {
                 ),
               ),
               Align(
-                alignment: AlignmentDirectional(-0.72, 0.0),
+                alignment: AlignmentDirectional(-0.64, 0.14),
                 child: Text(
                   'Your Body Composition?',
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -81,7 +81,7 @@ class _Frame70WidgetState extends State<Frame70Widget> {
                 ),
               ),
               Align(
-                alignment: AlignmentDirectional(-0.45, 0.11),
+                alignment: AlignmentDirectional(-0.45, 0.2),
                 child: Text(
                   'This helps us match you to a similar lifestyle.',
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -251,7 +251,7 @@ class _Frame70WidgetState extends State<Frame70Widget> {
                 ),
               ),
               Align(
-                alignment: AlignmentDirectional(0.0, -0.13),
+                alignment: AlignmentDirectional(-0.03, 0.04),
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(8.0),
                   child: Image.asset(

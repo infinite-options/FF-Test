@@ -73,7 +73,7 @@ class _Settings3WidgetState extends State<Settings3Widget> {
                         child: Icon(
                           FFIcons.k714,
                           color: Color(0xFFE4423F),
-                          size: 25.0,
+                          size: 24.0,
                         ),
                       ),
                       Padding(

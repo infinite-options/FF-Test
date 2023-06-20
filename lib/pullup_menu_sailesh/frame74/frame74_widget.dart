@@ -81,7 +81,7 @@ class _Frame74WidgetState extends State<Frame74Widget> {
                 ),
               ),
               Align(
-                alignment: AlignmentDirectional(-0.49, 0.06),
+                alignment: AlignmentDirectional(-0.29, 0.14),
                 child: Text(
                   'If you have any children please select an ',
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -94,7 +94,7 @@ class _Frame74WidgetState extends State<Frame74Widget> {
                 alignment: AlignmentDirectional(0.02, 0.74),
                 child: Container(
                   width: 364.0,
-                  height: 272.0,
+                  height: 269.0,
                   decoration: BoxDecoration(
                     color: FlutterFlowTheme.of(context).secondaryBackground,
                   ),
@@ -103,7 +103,13 @@ class _Frame74WidgetState extends State<Frame74Widget> {
                     focusColor: Colors.transparent,
                     hoverColor: Colors.transparent,
                     highlightColor: Colors.transparent,
-                    onTap: () async {},
+                    onTap: () async {
+                      await _model.listViewController?.animateTo(
+                        _model.listViewController!.position.maxScrollExtent,
+                        duration: Duration(milliseconds: 12),
+                        curve: Curves.ease,
+                      );
+                    },
                     child: ListView(
                       padding: EdgeInsets.zero,
                       scrollDirection: Axis.vertical,
@@ -325,7 +331,7 @@ class _Frame74WidgetState extends State<Frame74Widget> {
                 ),
               ),
               Align(
-                alignment: AlignmentDirectional(-0.77, 0.1),
+                alignment: AlignmentDirectional(-0.52, 0.2),
                 child: Text(
                   'accurate amount.',
                   style: FlutterFlowTheme.of(context).bodyMedium.override(

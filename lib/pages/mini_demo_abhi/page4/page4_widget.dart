@@ -433,7 +433,7 @@ class _Page4WidgetState extends State<Page4Widget> {
                                       padding: EdgeInsetsDirectional.fromSTEB(
                                           5.0, 0.0, 5.0, 0.0),
                                       child: Icon(
-                                        FFIcons.ktransgenderAlt,
+                                        FFIcons.kgenderIconCharcoal,
                                         color: Color(0xFFE4423F),
                                         size: 24.0,
                                       ),
@@ -495,7 +495,7 @@ class _Page4WidgetState extends State<Page4Widget> {
                                       padding: EdgeInsetsDirectional.fromSTEB(
                                           5.0, 0.0, 5.0, 0.0),
                                       child: Icon(
-                                        FFIcons.k768,
+                                        FFIcons.kstarCharcoal,
                                         color: Color(0xFFF7D76C),
                                         size: 24.0,
                                       ),
@@ -555,11 +555,11 @@ class _Page4WidgetState extends State<Page4Widget> {
                                   children: [
                                     Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
-                                          5.0, 0.0, 5.0, 0.0),
+                                          3.0, 0.0, 9.0, 0.0),
                                       child: Icon(
-                                        FFIcons.kgraduationCap1,
+                                        FFIcons.k184,
                                         color: Color(0xFFE4423F),
-                                        size: 24.0,
+                                        size: 20.0,
                                       ),
                                     ),
                                     Padding(
@@ -619,7 +619,7 @@ class _Page4WidgetState extends State<Page4Widget> {
                                       padding: EdgeInsetsDirectional.fromSTEB(
                                           5.0, 0.0, 5.0, 0.0),
                                       child: Icon(
-                                        Icons.flag_outlined,
+                                        FFIcons.k227,
                                         color: Color(0xFFF7D76C),
                                         size: 24.0,
                                       ),
@@ -650,7 +650,7 @@ class _Page4WidgetState extends State<Page4Widget> {
                                       padding: EdgeInsetsDirectional.fromSTEB(
                                           5.0, 0.0, 5.0, 0.0),
                                       child: Icon(
-                                        FFIcons.k7821,
+                                        FFIcons.kbottleIconCharcoal,
                                         color: Color(0xFFF89448),
                                         size: 24.0,
                                       ),
@@ -813,7 +813,7 @@ class _Page4WidgetState extends State<Page4Widget> {
                           buttonSize: 40.0,
                           fillColor: Color(0xFFCECECE),
                           icon: Icon(
-                            FFIcons.kdiamond,
+                            Icons.crop_square,
                             color: FlutterFlowTheme.of(context).primaryText,
                             size: 24.0,
                           ),

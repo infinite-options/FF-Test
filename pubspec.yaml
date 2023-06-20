@@ -110,6 +110,28 @@ flutter:
     - assets/pdfs/
 
 
+  fonts:
+    - family: MyFlutterApp
+      fonts:
+        - asset: assets/fonts/MyFlutterApp[1].ttf
+    - family: Mycrossicon
+      fonts:
+        - asset: assets/fonts/Mycrossicon.ttf
+    - family: CheckIcon
+      fonts:
+        - asset: assets/fonts/Check_icon.ttf
+    - family: SliderbuttonNew
+      fonts:
+        - asset: assets/fonts/SliderbuttonNew.ttf
+    - family: LockIcon
+      fonts:
+        - asset: assets/fonts/Lock_icon.ttf
+    - family: PersonIcon
+      fonts:
+        - asset: assets/fonts/Person_icon.ttf
+    - family: MapIcon
+      fonts:
+        - asset: assets/fonts/Map_icon.ttf
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

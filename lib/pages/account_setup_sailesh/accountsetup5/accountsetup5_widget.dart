@@ -54,7 +54,7 @@ class _Accountsetup5WidgetState extends State<Accountsetup5Widget> {
                   child: Image.asset(
                     'assets/images/pexels-katerina-holmes-5910804.png',
                     width: 431.0,
-                    height: 919.0,
+                    height: 941.0,
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -62,7 +62,7 @@ class _Accountsetup5WidgetState extends State<Accountsetup5Widget> {
                   alignment: AlignmentDirectional(0.0, 0.0),
                   child: Container(
                     width: 779.0,
-                    height: 872.0,
+                    height: 1157.0,
                     decoration: BoxDecoration(
                       color: Color(0x8AD79090),
                     ),

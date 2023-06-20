@@ -70,7 +70,7 @@ class _Frame72WidgetState extends State<Frame72Widget> {
                 ),
               ),
               Align(
-                alignment: AlignmentDirectional(-0.72, 0.0),
+                alignment: AlignmentDirectional(-0.61, 0.14),
                 child: Text(
                   'Your Drinking Habits?',
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -81,7 +81,7 @@ class _Frame72WidgetState extends State<Frame72Widget> {
                 ),
               ),
               Align(
-                alignment: AlignmentDirectional(-0.44, 0.08),
+                alignment: AlignmentDirectional(-0.31, 0.2),
                 child: Text(
                   'What are your current drinking habits? Please ',
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -94,7 +94,7 @@ class _Frame72WidgetState extends State<Frame72Widget> {
                 alignment: AlignmentDirectional(0.02, 0.74),
                 child: Container(
                   width: 364.0,
-                  height: 272.0,
+                  height: 194.0,
                   decoration: BoxDecoration(
                     color: FlutterFlowTheme.of(context).secondaryBackground,
                   ),
@@ -199,7 +199,7 @@ class _Frame72WidgetState extends State<Frame72Widget> {
                 ),
               ),
               Align(
-                alignment: AlignmentDirectional(-0.73, 0.12),
+                alignment: AlignmentDirectional(-0.61, 0.23),
                 child: Text(
                   'provide an accurate answer.',
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -236,7 +236,7 @@ class _Frame72WidgetState extends State<Frame72Widget> {
                 ),
               ),
               Align(
-                alignment: AlignmentDirectional(-0.03, -0.12),
+                alignment: AlignmentDirectional(-0.04, 0.03),
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(8.0),
                   child: Image.asset(

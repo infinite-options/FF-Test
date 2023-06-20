@@ -71,7 +71,7 @@ class _Settings1WidgetState extends State<Settings1Widget> {
                         padding:
                             EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
                         child: Icon(
-                          FFIcons.k714,
+                          FFIcons.kbottleIconCharcoal,
                           color: Color(0xFFE4423F),
                           size: 25.0,
                         ),
@@ -121,7 +121,7 @@ class _Settings1WidgetState extends State<Settings1Widget> {
                       padding:
                           EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
                       child: Icon(
-                        FFIcons.k794,
+                        FFIcons.k227,
                         color: Color(0xFFE4423F),
                         size: 25.0,
                       ),
@@ -167,7 +167,7 @@ class _Settings1WidgetState extends State<Settings1Widget> {
                     padding:
                         EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
                     child: Icon(
-                      FFIcons.k776,
+                      FFIcons.kpinMapIconCharcoal,
                       color: Color(0xFFE4423F),
                       size: 24.0,
                     ),

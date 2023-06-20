@@ -56,7 +56,7 @@ class _Frame73WidgetState extends State<Frame73Widget> {
               Align(
                 alignment: AlignmentDirectional(0.0, 1.6),
                 child: Container(
-                  width: 414.0,
+                  width: 519.0,
                   height: 550.0,
                   decoration: BoxDecoration(
                     color: FlutterFlowTheme.of(context).secondaryBackground,
@@ -70,7 +70,7 @@ class _Frame73WidgetState extends State<Frame73Widget> {
                 ),
               ),
               Align(
-                alignment: AlignmentDirectional(-0.72, 0.0),
+                alignment: AlignmentDirectional(-0.74, 0.14),
                 child: Text(
                   'Do You Smoke?',
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -81,7 +81,7 @@ class _Frame73WidgetState extends State<Frame73Widget> {
                 ),
               ),
               Align(
-                alignment: AlignmentDirectional(-0.46, 0.08),
+                alignment: AlignmentDirectional(-0.55, 0.22),
                 child: Text(
                   'What are your current smoking habits?  ',
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -94,7 +94,7 @@ class _Frame73WidgetState extends State<Frame73Widget> {
                 alignment: AlignmentDirectional(0.02, 0.74),
                 child: Container(
                   width: 364.0,
-                  height: 272.0,
+                  height: 216.0,
                   decoration: BoxDecoration(
                     color: FlutterFlowTheme.of(context).secondaryBackground,
                   ),
@@ -103,7 +103,13 @@ class _Frame73WidgetState extends State<Frame73Widget> {
                     focusColor: Colors.transparent,
                     hoverColor: Colors.transparent,
                     highlightColor: Colors.transparent,
-                    onTap: () async {},
+                    onTap: () async {
+                      await _model.listViewController?.animateTo(
+                        _model.listViewController!.position.maxScrollExtent,
+                        duration: Duration(milliseconds: 12),
+                        curve: Curves.ease,
+                      );
+                    },
                     child: ListView(
                       padding: EdgeInsets.zero,
                       scrollDirection: Axis.vertical,
@@ -209,7 +215,7 @@ class _Frame73WidgetState extends State<Frame73Widget> {
                 ),
               ),
               Align(
-                alignment: AlignmentDirectional(-0.56, 0.12),
+                alignment: AlignmentDirectional(-0.61, 0.26),
                 child: Text(
                   'Please provide an accurate answer.',
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -246,7 +252,7 @@ class _Frame73WidgetState extends State<Frame73Widget> {
                 ),
               ),
               Align(
-                alignment: AlignmentDirectional(-0.01, -0.12),
+                alignment: AlignmentDirectional(-0.05, 0.04),
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(8.0),
                   child: Image.asset(
