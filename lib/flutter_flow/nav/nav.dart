@@ -78,14 +78,14 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       refreshListenable: appStateNotifier,
       errorBuilder: (context, state) => appStateNotifier.loggedIn
           ? MeetUpHomePageWidget()
-          : AccountSetup1Widget(),
+          : AccountSetupRedoWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
           builder: (context, _) => appStateNotifier.loggedIn
               ? MeetUpHomePageWidget()
-              : AccountSetup1Widget(),
+              : AccountSetupRedoWidget(),
         ),
         FFRoute(
           name: 'MeetUpHomePage',
@@ -118,19 +118,19 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => OnboardingSlide1Widget(),
         ),
         FFRoute(
-          name: 'onboarding_slide2',
-          path: '/onboardingSlide2',
-          builder: (context, params) => OnboardingSlide2Widget(),
+          name: 'onboarding_slide2abhi',
+          path: '/onboardingSlide2abhi',
+          builder: (context, params) => OnboardingSlide2abhiWidget(),
         ),
         FFRoute(
-          name: 'onboarding_slide3',
-          path: '/onboardingSlide3',
-          builder: (context, params) => OnboardingSlide3Widget(),
+          name: 'onboarding_slide3abhi',
+          path: '/onboardingSlide3abhi',
+          builder: (context, params) => OnboardingSlide3abhiWidget(),
         ),
         FFRoute(
-          name: 'onboarding_slide4',
-          path: '/onboardingSlide4',
-          builder: (context, params) => OnboardingSlide4Widget(),
+          name: 'onboarding_slide4abhi',
+          path: '/onboardingSlide4abhi',
+          builder: (context, params) => OnboardingSlide4abhiWidget(),
         ),
         FFRoute(
           name: 'TrailAccountPage1',
@@ -396,6 +396,31 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'Frame84',
           path: '/frame84',
           builder: (context, params) => Frame84Widget(),
+        ),
+        FFRoute(
+          name: 'AccountSetupRedo',
+          path: '/accountSetupRedo',
+          builder: (context, params) => AccountSetupRedoWidget(),
+        ),
+        FFRoute(
+          name: 'AccountSetup1CreateCopy',
+          path: '/accountSetup1CreateCopy',
+          builder: (context, params) => AccountSetup1CreateCopyWidget(),
+        ),
+        FFRoute(
+          name: 'onboarding_slide2',
+          path: '/onboardingSlide2',
+          builder: (context, params) => OnboardingSlide2Widget(),
+        ),
+        FFRoute(
+          name: 'onboarding_slide3',
+          path: '/onboardingSlide3',
+          builder: (context, params) => OnboardingSlide3Widget(),
+        ),
+        FFRoute(
+          name: 'onboarding_slide4',
+          path: '/onboardingSlide4',
+          builder: (context, params) => OnboardingSlide4Widget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
@@ -562,7 +587,7 @@ class FFRoute {
 
           if (requireAuth && !appStateNotifier.loggedIn) {
             appStateNotifier.setRedirectLocationIfUnset(state.location);
-            return '/accountSetup1';
+            return '/accountSetupRedo';
           }
           return null;
         },

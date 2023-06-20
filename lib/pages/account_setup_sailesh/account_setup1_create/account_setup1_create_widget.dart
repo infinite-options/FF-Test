@@ -4,7 +4,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'account_setup1_create_model.dart';
@@ -28,12 +27,9 @@ class _AccountSetup1CreateWidgetState extends State<AccountSetup1CreateWidget> {
     super.initState();
     _model = createModel(context, () => AccountSetup1CreateModel());
 
-    _model.emailController ??=
-        TextEditingController(text: 'Lachlan@konnectdigital.io');
-    _model.passwordController ??=
-        TextEditingController(text: '. . . . . . . . . .');
-    _model.confirmPasswordController ??=
-        TextEditingController(text: '. . . . . . . . . .');
+    _model.emailController ??= TextEditingController();
+    _model.passwordController ??= TextEditingController();
+    _model.confirmPasswordController ??= TextEditingController();
   }
 
   @override
@@ -328,15 +324,75 @@ class _AccountSetup1CreateWidgetState extends State<AccountSetup1CreateWidget> {
                   ),
                 ),
                 Align(
-                  alignment: AlignmentDirectional(0.16, 0.42),
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(8.0),
-                    child: SvgPicture.asset(
-                      'assets/images/_757.svg',
-                      width: 354.0,
-                      height: 20.0,
-                      fit: BoxFit.cover,
-                    ),
+                  alignment: AlignmentDirectional(0.0, 0.0),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.max,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Align(
+                        alignment: AlignmentDirectional(-0.05, 0.83),
+                        child: FFButtonWidget(
+                          onPressed: () async {
+                            GoRouter.of(context).prepareAuthEvent();
+                            if (_model.passwordController.text !=
+                                _model.confirmPasswordController.text) {
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                SnackBar(
+                                  content: Text(
+                                    'Passwords don\'t match!',
+                                  ),
+                                ),
+                              );
+                              return;
+                            }
+
+                            final user =
+                                await authManager.createAccountWithEmail(
+                              context,
+                              _model.emailController.text,
+                              _model.passwordController.text,
+                            );
+                            if (user == null) {
+                              return;
+                            }
+
+                            final usersCreateData = createUsersRecordData(
+                              email: '',
+                            );
+                            await UsersRecord.collection
+                                .doc(user.uid)
+                                .update(usersCreateData);
+
+                            context.pushNamedAuth(
+                                'Accountsetup2', context.mounted);
+                          },
+                          text: 'Create Profile',
+                          options: FFButtonOptions(
+                            width: 202.0,
+                            height: 43.0,
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                0.0, 0.0, 0.0, 0.0),
+                            iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                0.0, 0.0, 0.0, 0.0),
+                            color: Color(0xFFE4423F),
+                            textStyle: FlutterFlowTheme.of(context)
+                                .titleSmall
+                                .override(
+                                  fontFamily: 'Readex Pro',
+                                  color: Colors.white,
+                                  fontSize: 18.0,
+                                  fontWeight: FontWeight.normal,
+                                ),
+                            elevation: 0.0,
+                            borderSide: BorderSide(
+                              color: Colors.transparent,
+                              width: 1.0,
+                            ),
+                            borderRadius: BorderRadius.circular(28.0),
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                 ),
                 Row(
@@ -446,30 +502,6 @@ class _AccountSetup1CreateWidgetState extends State<AccountSetup1CreateWidget> {
                         ),
                       ),
                     ],
-                  ),
-                ),
-                FFButtonWidget(
-                  onPressed: () {
-                    print('Button pressed ...');
-                  },
-                  text: 'Button',
-                  options: FFButtonOptions(
-                    height: 40.0,
-                    padding:
-                        EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-                    iconPadding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                    color: FlutterFlowTheme.of(context).primary,
-                    textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-                          fontFamily: 'Readex Pro',
-                          color: Colors.white,
-                        ),
-                    elevation: 3.0,
-                    borderSide: BorderSide(
-                      color: Colors.transparent,
-                      width: 1.0,
-                    ),
-                    borderRadius: BorderRadius.circular(8.0),
                   ),
                 ),
               ],

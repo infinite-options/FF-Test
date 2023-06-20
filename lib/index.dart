@@ -8,12 +8,12 @@ export '/pages/a_p_i_test/a_p_i_test_widget.dart' show APITestWidget;
 export '/pages/a_p_i_example/a_p_i_example_widget.dart' show APIExampleWidget;
 export '/pages/onboarding_abhi/onboarding_slide1/onboarding_slide1_widget.dart'
     show OnboardingSlide1Widget;
-export '/pages/onboarding_abhi/onboarding_slide2/onboarding_slide2_widget.dart'
-    show OnboardingSlide2Widget;
-export '/pages/onboarding_abhi/onboarding_slide3/onboarding_slide3_widget.dart'
-    show OnboardingSlide3Widget;
-export '/pages/onboarding_abhi/onboarding_slide4/onboarding_slide4_widget.dart'
-    show OnboardingSlide4Widget;
+export '/pages/onboarding_abhi/onboarding_slide2abhi/onboarding_slide2abhi_widget.dart'
+    show OnboardingSlide2abhiWidget;
+export '/pages/onboarding_abhi/onboarding_slide3abhi/onboarding_slide3abhi_widget.dart'
+    show OnboardingSlide3abhiWidget;
+export '/pages/onboarding_abhi/onboarding_slide4abhi/onboarding_slide4abhi_widget.dart'
+    show OnboardingSlide4abhiWidget;
 export '/pages/mini_demo_abhi/trail_account_page1/trail_account_page1_widget.dart'
     show TrailAccountPage1Widget;
 export '/pages/mini_demo_abhi/page2/page2_widget.dart' show Page2Widget;
@@ -28,8 +28,10 @@ export '/pages/profile_abhi/profile_page3/profile_page3_widget.dart'
     show ProfilePage3Widget;
 export '/pages/profile_abhi/profile_page4/profile_page4_widget.dart'
     show ProfilePage4Widget;
-export '/pages/profile_page5/profile_page5_widget.dart' show ProfilePage5Widget;
-export '/pages/profile_page6/profile_page6_widget.dart' show ProfilePage6Widget;
+export '/pages/profile_abhi/profile_page5/profile_page5_widget.dart'
+    show ProfilePage5Widget;
+export '/pages/profile_abhi/profile_page6/profile_page6_widget.dart'
+    show ProfilePage6Widget;
 export '/pages/profile_abhi/profile_page7/profile_page7_widget.dart'
     show ProfilePage7Widget;
 export '/pages/profile_abhi/profile_page8/profile_page8_widget.dart'
@@ -92,3 +94,13 @@ export '/pullup_menu_sailesh/frame81/frame81_widget.dart' show Frame81Widget;
 export '/pullup_menu_sailesh/frame82/frame82_widget.dart' show Frame82Widget;
 export '/pullup_menu_sailesh/frame83/frame83_widget.dart' show Frame83Widget;
 export '/pullup_menu_sailesh/frame84/frame84_widget.dart' show Frame84Widget;
+export '/pages/account_setup_sailesh/account_setup_redo/account_setup_redo_widget.dart'
+    show AccountSetupRedoWidget;
+export '/pages/account_setup_sailesh/account_setup1_create_copy/account_setup1_create_copy_widget.dart'
+    show AccountSetup1CreateCopyWidget;
+export '/pages/onboarding_abhi/onboarding_slide2/onboarding_slide2_widget.dart'
+    show OnboardingSlide2Widget;
+export '/pages/onboarding_abhi/onboarding_slide3/onboarding_slide3_widget.dart'
+    show OnboardingSlide3Widget;
+export '/pages/onboarding_abhi/onboarding_slide4/onboarding_slide4_widget.dart'
+    show OnboardingSlide4Widget;

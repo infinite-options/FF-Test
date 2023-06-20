@@ -1,4 +1,3 @@
-import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -72,9 +71,13 @@ class _OnboardingSlide1WidgetState extends State<OnboardingSlide1Widget> {
                             ),
                             TextSpan(
                               text: 'daters',
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                              ),
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyMedium
+                                  .override(
+                                    fontFamily: 'Readex Pro',
+                                    fontSize: 20.0,
+                                    fontWeight: FontWeight.bold,
+                                  ),
                             ),
                             TextSpan(
                               text: '.\n',
@@ -92,9 +95,13 @@ class _OnboardingSlide1WidgetState extends State<OnboardingSlide1Widget> {
                             ),
                             TextSpan(
                               text: 'time poor',
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                              ),
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyMedium
+                                  .override(
+                                    fontFamily: 'Readex Pro',
+                                    fontSize: 20.0,
+                                    fontWeight: FontWeight.bold,
+                                  ),
                             ),
                             TextSpan(
                               text: '?',
@@ -119,41 +126,68 @@ class _OnboardingSlide1WidgetState extends State<OnboardingSlide1Widget> {
                   ],
                 ),
                 Expanded(
-                  child: StreamBuilder<List<AssetsRecord>>(
-                    stream: queryAssetsRecord(),
-                    builder: (context, snapshot) {
-                      // Customize what your widget looks like when it's loading.
-                      if (!snapshot.hasData) {
-                        return Center(
-                          child: SizedBox(
-                            width: 50.0,
-                            height: 50.0,
-                            child: CircularProgressIndicator(
-                              color: FlutterFlowTheme.of(context).primary,
-                            ),
-                          ),
-                        );
-                      }
-                      List<AssetsRecord> rowAssetsRecordList = snapshot.data!;
-                      return Row(
-                        mainAxisSize: MainAxisSize.max,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: List.generate(rowAssetsRecordList.length,
-                            (rowIndex) {
-                          final rowAssetsRecord = rowAssetsRecordList[rowIndex];
-                          return ClipRRect(
-                            borderRadius: BorderRadius.circular(48.0),
-                            child: Image.network(
-                              rowAssetsRecord.images[0],
-                              width: MediaQuery.of(context).size.width * 0.8,
-                              height: 466.0,
-                              fit: BoxFit.fitWidth,
-                            ),
-                          );
-                        }),
-                      );
-                    },
+                  child: Row(
+                    mainAxisSize: MainAxisSize.max,
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(48.0),
+                        child: Image.asset(
+                          'assets/images/mask_onb1.png',
+                          width: MediaQuery.of(context).size.width * 0.93,
+                          fit: BoxFit.contain,
+                        ),
+                      ),
+                    ],
                   ),
+                ),
+                Row(
+                  mainAxisSize: MainAxisSize.max,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    RichText(
+                      text: TextSpan(
+                        children: [
+                          TextSpan(
+                            text: 'We do',
+                            style: FlutterFlowTheme.of(context)
+                                .bodyMedium
+                                .override(
+                                  fontFamily: 'Readex Pro',
+                                  color:
+                                      FlutterFlowTheme.of(context).primaryText,
+                                  fontSize: 22.0,
+                                  fontWeight: FontWeight.w300,
+                                ),
+                          ),
+                          TextSpan(
+                            text: ' small talk ',
+                            style: FlutterFlowTheme.of(context)
+                                .bodyMedium
+                                .override(
+                                  fontFamily: 'Readex Pro',
+                                  fontSize: 22.0,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                          ),
+                          TextSpan(
+                            text: 'for you.',
+                            style: FlutterFlowTheme.of(context)
+                                .bodyMedium
+                                .override(
+                                  fontFamily: 'Readex Pro',
+                                  fontSize: 22.0,
+                                  fontWeight: FontWeight.w300,
+                                ),
+                          )
+                        ],
+                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                              fontFamily: 'Lexend',
+                              fontSize: 18.0,
+                            ),
+                      ),
+                    ),
+                  ],
                 ),
                 Row(
                   mainAxisSize: MainAxisSize.max,
@@ -161,136 +195,102 @@ class _OnboardingSlide1WidgetState extends State<OnboardingSlide1Widget> {
                   children: [
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 32.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                       child: RichText(
                         text: TextSpan(
                           children: [
                             TextSpan(
-                              text: 'We do',
+                              text: 'Arrange ',
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
                                     fontFamily: 'Readex Pro',
                                     color: FlutterFlowTheme.of(context)
                                         .primaryText,
-                                    fontSize: 22.0,
-                                    fontWeight: FontWeight.w300,
+                                    fontSize: 16.0,
+                                    fontWeight: FontWeight.bold,
                                   ),
                             ),
                             TextSpan(
-                              text: ' small talk ',
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 22.0,
-                              ),
-                            ),
-                            TextSpan(
-                              text: 'for you.',
+                              text: 'your ',
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
                                     fontFamily: 'Readex Pro',
-                                    fontSize: 22.0,
+                                    fontSize: 16.0,
                                     fontWeight: FontWeight.w300,
+                                  ),
+                            ),
+                            TextSpan(
+                              text: 'meeting',
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyMedium
+                                  .override(
+                                    fontFamily: 'Readex Pro',
+                                    fontSize: 16.0,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                            ),
+                            TextSpan(
+                              text: ' time & ',
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyMedium
+                                  .override(
+                                    fontFamily: 'Readex Pro',
+                                    fontSize: 16.0,
+                                    fontWeight: FontWeight.w300,
+                                  ),
+                            ),
+                            TextSpan(
+                              text: 'destination ',
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyMedium
+                                  .override(
+                                    fontFamily: 'Readex Pro',
+                                    fontSize: 16.0,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                            ),
+                            TextSpan(
+                              text: 'through\n',
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyMedium
+                                  .override(
+                                    fontFamily: 'Readex Pro',
+                                    fontSize: 16.0,
+                                    fontWeight: FontWeight.w300,
+                                  ),
+                            ),
+                            TextSpan(
+                              text: 'the app with only ',
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyMedium
+                                  .override(
+                                    fontFamily: 'Readex Pro',
+                                    fontSize: 16.0,
+                                    fontWeight: FontWeight.w300,
+                                  ),
+                            ),
+                            TextSpan(
+                              text: 'automated prompting. ',
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyMedium
+                                  .override(
+                                    fontFamily: 'Readex Pro',
+                                    fontSize: 16.0,
+                                    fontWeight: FontWeight.bold,
                                   ),
                             )
                           ],
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
                                     fontFamily: 'Lexend',
-                                    fontSize: 18.0,
                                   ),
                         ),
+                        textAlign: TextAlign.center,
                       ),
                     ),
                   ],
-                ),
-                Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
-                  child: RichText(
-                    text: TextSpan(
-                      children: [
-                        TextSpan(
-                          text: 'Arrange ',
-                          style: FlutterFlowTheme.of(context)
-                              .bodyMedium
-                              .override(
-                                fontFamily: 'Readex Pro',
-                                color: FlutterFlowTheme.of(context).primaryText,
-                                fontSize: 16.0,
-                                fontWeight: FontWeight.bold,
-                              ),
-                        ),
-                        TextSpan(
-                          text: 'your ',
-                          style:
-                              FlutterFlowTheme.of(context).bodyMedium.override(
-                                    fontFamily: 'Readex Pro',
-                                    fontSize: 16.0,
-                                    fontWeight: FontWeight.w300,
-                                  ),
-                        ),
-                        TextSpan(
-                          text: 'meeting',
-                          style:
-                              FlutterFlowTheme.of(context).bodyMedium.override(
-                                    fontFamily: 'Readex Pro',
-                                    fontSize: 16.0,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                        ),
-                        TextSpan(
-                          text: ' time & ',
-                          style:
-                              FlutterFlowTheme.of(context).bodyMedium.override(
-                                    fontFamily: 'Readex Pro',
-                                    fontSize: 16.0,
-                                    fontWeight: FontWeight.w300,
-                                  ),
-                        ),
-                        TextSpan(
-                          text: 'destination ',
-                          style:
-                              FlutterFlowTheme.of(context).bodyMedium.override(
-                                    fontFamily: 'Readex Pro',
-                                    fontSize: 16.0,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                        ),
-                        TextSpan(
-                          text: 'through\n',
-                          style:
-                              FlutterFlowTheme.of(context).bodyMedium.override(
-                                    fontFamily: 'Readex Pro',
-                                    fontSize: 16.0,
-                                    fontWeight: FontWeight.w300,
-                                  ),
-                        ),
-                        TextSpan(
-                          text: 'the app with only ',
-                          style:
-                              FlutterFlowTheme.of(context).bodyMedium.override(
-                                    fontFamily: 'Readex Pro',
-                                    fontSize: 16.0,
-                                    fontWeight: FontWeight.w300,
-                                  ),
-                        ),
-                        TextSpan(
-                          text: 'automated prompting. ',
-                          style:
-                              FlutterFlowTheme.of(context).bodyMedium.override(
-                                    fontFamily: 'Readex Pro',
-                                    fontSize: 16.0,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                        )
-                      ],
-                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily: 'Lexend',
-                          ),
-                    ),
-                    textAlign: TextAlign.center,
-                  ),
                 ),
                 Row(
                   mainAxisSize: MainAxisSize.max,
@@ -301,7 +301,7 @@ class _OnboardingSlide1WidgetState extends State<OnboardingSlide1Widget> {
                           EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 0.0),
                       child: FFButtonWidget(
                         onPressed: () async {
-                          context.pushNamed('onboarding_slide2');
+                          context.pushNamed('onboarding_slide2abhi');
                         },
                         text: 'Let\'s Start',
                         options: FFButtonOptions(
