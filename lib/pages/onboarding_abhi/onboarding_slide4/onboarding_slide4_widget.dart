@@ -212,7 +212,7 @@ class _OnboardingSlide4WidgetState extends State<OnboardingSlide4Widget> {
                           EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 0.0),
                       child: FFButtonWidget(
                         onPressed: () async {
-                          context.pushNamed('onboarding_slide2abhi');
+                          context.pushNamed('TrailAccountPage1');
                         },
                         text: 'Let\'s Start',
                         options: FFButtonOptions(

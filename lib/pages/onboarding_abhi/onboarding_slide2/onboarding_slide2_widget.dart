@@ -240,7 +240,7 @@ class _OnboardingSlide2WidgetState extends State<OnboardingSlide2Widget> {
                           EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 0.0),
                       child: FFButtonWidget(
                         onPressed: () async {
-                          context.pushNamed('onboarding_slide2abhi');
+                          context.pushNamed('onboarding_slide3');
                         },
                         text: 'Let\'s Start',
                         options: FFButtonOptions(

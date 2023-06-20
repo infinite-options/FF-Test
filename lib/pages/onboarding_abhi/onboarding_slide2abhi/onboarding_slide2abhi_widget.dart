@@ -117,7 +117,7 @@ class _OnboardingSlide2abhiWidgetState
                       ClipRRect(
                         borderRadius: BorderRadius.circular(48.0),
                         child: Image.asset(
-                          'assets/images/d6a627ba8dbcd6e4438d2ba3e397a34f.jfif',
+                          'assets/images/mask_onb2.png',
                           width: 350.0,
                           height: 466.0,
                           fit: BoxFit.cover,
