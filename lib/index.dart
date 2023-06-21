@@ -1,11 +1,12 @@
 // Export pages
-export '/pages/meet_up_home_page/meet_up_home_page_widget.dart'
+export '/pages/login/meet_up_home_page/meet_up_home_page_widget.dart'
     show MeetUpHomePageWidget;
-export '/pages/background/background_widget.dart' show BackgroundWidget;
-export '/pages/a_p_i_call_test/a_p_i_call_test_widget.dart'
+export '/pages/login/background/background_widget.dart' show BackgroundWidget;
+export '/pages/login/a_p_i_call_test/a_p_i_call_test_widget.dart'
     show APICallTestWidget;
-export '/pages/a_p_i_test/a_p_i_test_widget.dart' show APITestWidget;
-export '/pages/a_p_i_example/a_p_i_example_widget.dart' show APIExampleWidget;
+export '/pages/login/a_p_i_test/a_p_i_test_widget.dart' show APITestWidget;
+export '/pages/login/a_p_i_example/a_p_i_example_widget.dart'
+    show APIExampleWidget;
 export '/pages/onboarding_abhi/onboarding_slide1/onboarding_slide1_widget.dart'
     show OnboardingSlide1Widget;
 export '/pages/onboarding_abhi/onboarding_slide2abhi/onboarding_slide2abhi_widget.dart'
@@ -82,8 +83,8 @@ export '/pullup_menu_sailesh/frame70/frame70_widget.dart' show Frame70Widget;
 export '/pullup_menu_sailesh/frame72/frame72_widget.dart' show Frame72Widget;
 export '/pullup_menu_sailesh/frame73/frame73_widget.dart' show Frame73Widget;
 export '/pullup_menu_sailesh/frame74/frame74_widget.dart' show Frame74Widget;
-export '/pages/account_setup_sailesh/account_setup1_create/account_setup1_create_widget.dart'
-    show AccountSetup1CreateWidget;
+export '/pages/account_setup_sailesh/account_setup_createold/account_setup_createold_widget.dart'
+    show AccountSetupCreateoldWidget;
 export '/pullup_menu_sailesh/frame71/frame71_widget.dart' show Frame71Widget;
 export '/pullup_menu_sailesh/frame75/frame75_widget.dart' show Frame75Widget;
 export '/pullup_menu_sailesh/frame76/frame76_widget.dart' show Frame76Widget;
@@ -94,8 +95,8 @@ export '/pullup_menu_sailesh/frame81/frame81_widget.dart' show Frame81Widget;
 export '/pullup_menu_sailesh/frame82/frame82_widget.dart' show Frame82Widget;
 export '/pullup_menu_sailesh/frame83/frame83_widget.dart' show Frame83Widget;
 export '/pullup_menu_sailesh/frame84/frame84_widget.dart' show Frame84Widget;
-export '/pages/account_setup_sailesh/account_setup_redo/account_setup_redo_widget.dart'
-    show AccountSetupRedoWidget;
+export '/pages/account_setup_sailesh/account_setup_loginold/account_setup_loginold_widget.dart'
+    show AccountSetupLoginoldWidget;
 export '/pages/account_setup_sailesh/account_setup1_create_copy/account_setup1_create_copy_widget.dart'
     show AccountSetup1CreateCopyWidget;
 export '/pages/onboarding_abhi/onboarding_slide2/onboarding_slide2_widget.dart'
@@ -104,3 +105,11 @@ export '/pages/onboarding_abhi/onboarding_slide3/onboarding_slide3_widget.dart'
     show OnboardingSlide3Widget;
 export '/pages/onboarding_abhi/onboarding_slide4/onboarding_slide4_widget.dart'
     show OnboardingSlide4Widget;
+export '/pages/mini_demo_abhi/trail_account_page2/trail_account_page2_widget.dart'
+    show TrailAccountPage2Widget;
+export '/pages/mini_demo_abhi/trail_account_page3/trail_account_page3_widget.dart'
+    show TrailAccountPage3Widget;
+export '/pages/account_setup_sailesh/account_setup_create/account_setup_create_widget.dart'
+    show AccountSetupCreateWidget;
+export '/pages/account_setup_sailesh/account_setup_login/account_setup_login_widget.dart'
+    show AccountSetupLoginWidget;

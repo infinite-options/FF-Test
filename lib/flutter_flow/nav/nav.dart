@@ -77,15 +77,15 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
       errorBuilder: (context, state) => appStateNotifier.loggedIn
-          ? MeetUpHomePageWidget()
-          : AccountSetupRedoWidget(),
+          ? TrailAccountPage2Widget()
+          : MeetUpHomePageWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
           builder: (context, _) => appStateNotifier.loggedIn
-              ? MeetUpHomePageWidget()
-              : AccountSetupRedoWidget(),
+              ? TrailAccountPage2Widget()
+              : MeetUpHomePageWidget(),
         ),
         FFRoute(
           name: 'MeetUpHomePage',
@@ -343,9 +343,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => Frame74Widget(),
         ),
         FFRoute(
-          name: 'AccountSetup1Create',
-          path: '/accountSetup1Create',
-          builder: (context, params) => AccountSetup1CreateWidget(),
+          name: 'AccountSetup-Createold',
+          path: '/accountSetupCreateold',
+          builder: (context, params) => AccountSetupCreateoldWidget(),
         ),
         FFRoute(
           name: 'Frame71',
@@ -398,9 +398,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => Frame84Widget(),
         ),
         FFRoute(
-          name: 'AccountSetupRedo',
-          path: '/accountSetupRedo',
-          builder: (context, params) => AccountSetupRedoWidget(),
+          name: 'AccountSetup-Loginold',
+          path: '/accountSetupLoginold',
+          builder: (context, params) => AccountSetupLoginoldWidget(),
         ),
         FFRoute(
           name: 'AccountSetup1CreateCopy',
@@ -421,6 +421,26 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'onboarding_slide4',
           path: '/onboardingSlide4',
           builder: (context, params) => OnboardingSlide4Widget(),
+        ),
+        FFRoute(
+          name: 'TrailAccountPage2',
+          path: '/trailAccountPage2',
+          builder: (context, params) => TrailAccountPage2Widget(),
+        ),
+        FFRoute(
+          name: 'TrailAccountPage3',
+          path: '/trailAccountPage3',
+          builder: (context, params) => TrailAccountPage3Widget(),
+        ),
+        FFRoute(
+          name: 'AccountSetup-Create',
+          path: '/accountSetupCreate',
+          builder: (context, params) => AccountSetupCreateWidget(),
+        ),
+        FFRoute(
+          name: 'AccountSetup-Login',
+          path: '/accountSetupLogin',
+          builder: (context, params) => AccountSetupLoginWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
@@ -587,7 +607,7 @@ class FFRoute {
 
           if (requireAuth && !appStateNotifier.loggedIn) {
             appStateNotifier.setRedirectLocationIfUnset(state.location);
-            return '/accountSetupRedo';
+            return '/meetUpHomePage';
           }
           return null;
         },

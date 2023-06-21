@@ -1,4 +1,3 @@
-import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -279,44 +278,6 @@ class _OnboardingSlide2abhiWidgetState
                     ],
                   ),
                 ],
-              ),
-              Expanded(
-                child: StreamBuilder<List<AssetsRecord>>(
-                  stream: queryAssetsRecord(),
-                  builder: (context, snapshot) {
-                    // Customize what your widget looks like when it's loading.
-                    if (!snapshot.hasData) {
-                      return Center(
-                        child: SizedBox(
-                          width: 50.0,
-                          height: 50.0,
-                          child: CircularProgressIndicator(
-                            color: FlutterFlowTheme.of(context).primary,
-                          ),
-                        ),
-                      );
-                    }
-                    List<AssetsRecord> rowAssetsRecordList = snapshot.data!;
-                    return Row(
-                      mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      crossAxisAlignment: CrossAxisAlignment.stretch,
-                      children:
-                          List.generate(rowAssetsRecordList.length, (rowIndex) {
-                        final rowAssetsRecord = rowAssetsRecordList[rowIndex];
-                        return ClipRRect(
-                          borderRadius: BorderRadius.circular(48.0),
-                          child: Image.network(
-                            rowAssetsRecord.images.first,
-                            width: MediaQuery.of(context).size.width * 0.895,
-                            height: 466.0,
-                            fit: BoxFit.fill,
-                          ),
-                        );
-                      }),
-                    );
-                  },
-                ),
               ),
             ],
           ),

@@ -132,6 +132,9 @@ flutter:
     - family: MapIcon
       fonts:
         - asset: assets/fonts/Map_icon.ttf
+    - family: PMFlutterIcons
+      fonts:
+        - asset: assets/fonts/PMFlutterIcons.ttf
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

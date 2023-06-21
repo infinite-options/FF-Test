@@ -121,7 +121,6 @@ class _OnboardingSlide4WidgetState extends State<OnboardingSlide4Widget> {
                         borderRadius: BorderRadius.circular(48.0),
                         child: Image.asset(
                           'assets/images/mask_onb4.png',
-                          width: MediaQuery.of(context).size.width * 0.93,
                           fit: BoxFit.contain,
                         ),
                       ),

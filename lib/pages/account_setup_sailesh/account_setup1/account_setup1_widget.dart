@@ -272,7 +272,7 @@ class _AccountSetup1WidgetState extends State<AccountSetup1Widget> {
                           }
 
                           context.goNamedAuth(
-                              'MeetUpHomePage', context.mounted);
+                              'TrailAccountPage2', context.mounted);
                         },
                         text: 'Login',
                         options: FFButtonOptions(
@@ -395,7 +395,7 @@ class _AccountSetup1WidgetState extends State<AccountSetup1Widget> {
                       alignment: AlignmentDirectional(-0.05, 0.83),
                       child: FFButtonWidget(
                         onPressed: () async {
-                          context.pushNamed('AccountSetup1Create');
+                          context.pushNamed('AccountSetup-Createold');
                         },
                         text: 'Create Profile',
                         options: FFButtonOptions(

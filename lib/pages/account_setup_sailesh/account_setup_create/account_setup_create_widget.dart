@@ -6,25 +6,26 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'account_setup_redo_model.dart';
-export 'account_setup_redo_model.dart';
+import 'account_setup_create_model.dart';
+export 'account_setup_create_model.dart';
 
-class AccountSetupRedoWidget extends StatefulWidget {
-  const AccountSetupRedoWidget({Key? key}) : super(key: key);
+class AccountSetupCreateWidget extends StatefulWidget {
+  const AccountSetupCreateWidget({Key? key}) : super(key: key);
 
   @override
-  _AccountSetupRedoWidgetState createState() => _AccountSetupRedoWidgetState();
+  _AccountSetupCreateWidgetState createState() =>
+      _AccountSetupCreateWidgetState();
 }
 
-class _AccountSetupRedoWidgetState extends State<AccountSetupRedoWidget> {
-  late AccountSetupRedoModel _model;
+class _AccountSetupCreateWidgetState extends State<AccountSetupCreateWidget> {
+  late AccountSetupCreateModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => AccountSetupRedoModel());
+    _model = createModel(context, () => AccountSetupCreateModel());
 
     _model.emailController ??= TextEditingController();
     _model.passwordController ??= TextEditingController();
@@ -47,44 +48,41 @@ class _AccountSetupRedoWidgetState extends State<AccountSetupRedoWidget> {
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
         body: SafeArea(
           top: true,
-          child: Stack(
-            children: [
-              Container(
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  color: FlutterFlowTheme.of(context).secondaryBackground,
-                ),
-                child: Stack(
-                  children: [
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(8.0),
-                      child: Image.asset(
-                        'assets/images/pexels-maria-orlova-4946520.png',
-                        width: MediaQuery.of(context).size.width * 1.0,
-                        fit: BoxFit.fitWidth,
-                      ),
+          child: Container(
+            width: 772.0,
+            height: 947.0,
+            decoration: BoxDecoration(
+              color: FlutterFlowTheme.of(context).secondaryBackground,
+            ),
+            child: Stack(
+              children: [
+                Align(
+                  alignment: AlignmentDirectional(0.0, -1.01),
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(0.0),
+                    child: Image.asset(
+                      'assets/images/pexels-maria-orlova-4946520.png',
+                      width: 446.0,
+                      height: 421.0,
+                      fit: BoxFit.cover,
                     ),
-                    Align(
-                      alignment: AlignmentDirectional(0.0, 0.0),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(8.0),
-                        child: Image.asset(
-                          'assets/images/red_filter.png',
-                          width: MediaQuery.of(context).size.width * 1.0,
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-                  ],
+                  ),
                 ),
-              ),
-              Align(
-                alignment: AlignmentDirectional(0.0, 0.0),
-                child: Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 220.0, 0.0, 0.0),
+                Align(
+                  alignment: AlignmentDirectional(-0.53, -1.01),
                   child: Container(
-                    width: MediaQuery.of(context).size.width * 1.0,
-                    height: 723.0,
+                    width: 495.0,
+                    height: 422.0,
+                    decoration: BoxDecoration(
+                      color: Color(0x8AD79090),
+                    ),
+                  ),
+                ),
+                Align(
+                  alignment: AlignmentDirectional(0.0, 0.74),
+                  child: Container(
+                    width: 489.0,
+                    height: 670.0,
                     decoration: BoxDecoration(
                       color: FlutterFlowTheme.of(context).secondaryBackground,
                       borderRadius: BorderRadius.only(
@@ -96,31 +94,28 @@ class _AccountSetupRedoWidgetState extends State<AccountSetupRedoWidget> {
                     ),
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              0.0, 20.0, 0.0, 20.0),
-                          child: Row(
-                            mainAxisSize: MainAxisSize.max,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Align(
-                                alignment: AlignmentDirectional(0.06, -0.45),
-                                child: Text(
-                                  'meet me up',
-                                  style: FlutterFlowTheme.of(context)
-                                      .bodyMedium
-                                      .override(
-                                        fontFamily: 'Inria Sans',
-                                        color: Color(0xFFE4423F),
-                                        fontSize: 36.0,
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                ),
+                        Row(
+                          mainAxisSize: MainAxisSize.max,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Align(
+                              alignment: AlignmentDirectional(0.06, -0.45),
+                              child: Text(
+                                'meet me up',
+                                textAlign: TextAlign.center,
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyMedium
+                                    .override(
+                                      fontFamily: 'Inria Sans',
+                                      color: Color(0xFFE4423F),
+                                      fontSize: 36.0,
+                                      fontWeight: FontWeight.bold,
+                                    ),
                               ),
-                            ],
-                          ),
+                            ),
+                          ],
                         ),
                         Row(
                           mainAxisSize: MainAxisSize.max,
@@ -130,6 +125,7 @@ class _AccountSetupRedoWidgetState extends State<AccountSetupRedoWidget> {
                               alignment: AlignmentDirectional(0.11, -0.33),
                               child: Text(
                                 'Let’s get you out there',
+                                textAlign: TextAlign.center,
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
@@ -145,7 +141,7 @@ class _AccountSetupRedoWidgetState extends State<AccountSetupRedoWidget> {
                           alignment: AlignmentDirectional(0.0, -0.17),
                           child: Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(
-                                20.0, 20.0, 20.0, 10.0),
+                                20.0, 0.0, 20.0, 0.0),
                             child: TextFormField(
                               controller: _model.emailController,
                               autofocus: true,
@@ -209,7 +205,7 @@ class _AccountSetupRedoWidgetState extends State<AccountSetupRedoWidget> {
                           alignment: AlignmentDirectional(0.0, 0.0),
                           child: Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(
-                                20.0, 10.0, 20.0, 10.0),
+                                20.0, 0.0, 20.0, 0.0),
                             child: TextFormField(
                               controller: _model.passwordController,
                               autofocus: true,
@@ -286,7 +282,7 @@ class _AccountSetupRedoWidgetState extends State<AccountSetupRedoWidget> {
                           alignment: AlignmentDirectional(0.0, 0.18),
                           child: Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(
-                                20.0, 10.0, 20.0, 20.0),
+                                20.0, 0.0, 20.0, 0.0),
                             child: TextFormField(
                               controller: _model.confirmPasswordController,
                               autofocus: true,
@@ -366,75 +362,64 @@ class _AccountSetupRedoWidgetState extends State<AccountSetupRedoWidget> {
                             mainAxisSize: MainAxisSize.max,
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Align(
-                                alignment: AlignmentDirectional(-0.05, 0.83),
-                                child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      20.0, 20.0, 20.0, 20.0),
-                                  child: FFButtonWidget(
-                                    onPressed: () async {
-                                      GoRouter.of(context).prepareAuthEvent();
-                                      if (_model.passwordController.text !=
-                                          _model
-                                              .confirmPasswordController.text) {
-                                        ScaffoldMessenger.of(context)
-                                            .showSnackBar(
-                                          SnackBar(
-                                            content: Text(
-                                              'Passwords don\'t match!',
-                                            ),
-                                          ),
-                                        );
-                                        return;
-                                      }
-
-                                      final user = await authManager
-                                          .createAccountWithEmail(
-                                        context,
-                                        _model.emailController.text,
-                                        _model.passwordController.text,
-                                      );
-                                      if (user == null) {
-                                        return;
-                                      }
-
-                                      final usersCreateData =
-                                          createUsersRecordData(
-                                        email: '',
-                                      );
-                                      await UsersRecord.collection
-                                          .doc(user.uid)
-                                          .update(usersCreateData);
-
-                                      context.goNamedAuth(
-                                          'MeetUpHomePage', context.mounted);
-                                    },
-                                    text: 'Create Account',
-                                    options: FFButtonOptions(
-                                      width: 202.0,
-                                      height: 43.0,
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          0.0, 0.0, 0.0, 0.0),
-                                      iconPadding:
-                                          EdgeInsetsDirectional.fromSTEB(
-                                              0.0, 0.0, 0.0, 0.0),
-                                      color: Color(0xFFE4423F),
-                                      textStyle: FlutterFlowTheme.of(context)
-                                          .titleSmall
-                                          .override(
-                                            fontFamily: 'Readex Pro',
-                                            color: Colors.white,
-                                            fontSize: 18.0,
-                                            fontWeight: FontWeight.normal,
-                                          ),
-                                      elevation: 0.0,
-                                      borderSide: BorderSide(
-                                        color: Colors.transparent,
-                                        width: 1.0,
+                              FFButtonWidget(
+                                onPressed: () async {
+                                  GoRouter.of(context).prepareAuthEvent();
+                                  if (_model.passwordController.text !=
+                                      _model.confirmPasswordController.text) {
+                                    ScaffoldMessenger.of(context).showSnackBar(
+                                      SnackBar(
+                                        content: Text(
+                                          'Passwords don\'t match!',
+                                        ),
                                       ),
-                                      borderRadius: BorderRadius.circular(28.0),
-                                    ),
+                                    );
+                                    return;
+                                  }
+
+                                  final user =
+                                      await authManager.createAccountWithEmail(
+                                    context,
+                                    _model.emailController.text,
+                                    _model.passwordController.text,
+                                  );
+                                  if (user == null) {
+                                    return;
+                                  }
+
+                                  final usersCreateData = createUsersRecordData(
+                                    email: '',
+                                  );
+                                  await UsersRecord.collection
+                                      .doc(user.uid)
+                                      .update(usersCreateData);
+
+                                  context.goNamedAuth(
+                                      'TrailAccountPage2', context.mounted);
+                                },
+                                text: 'Create Account',
+                                options: FFButtonOptions(
+                                  width: 202.0,
+                                  height: 43.0,
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      0.0, 0.0, 0.0, 0.0),
+                                  iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                      0.0, 0.0, 0.0, 0.0),
+                                  color: Color(0xFFE4423F),
+                                  textStyle: FlutterFlowTheme.of(context)
+                                      .titleSmall
+                                      .override(
+                                        fontFamily: 'Readex Pro',
+                                        color: Colors.white,
+                                        fontSize: 18.0,
+                                        fontWeight: FontWeight.normal,
+                                      ),
+                                  elevation: 0.0,
+                                  borderSide: BorderSide(
+                                    color: Colors.transparent,
+                                    width: 1.0,
                                   ),
+                                  borderRadius: BorderRadius.circular(28.0),
                                 ),
                               ),
                             ],
@@ -446,21 +431,17 @@ class _AccountSetupRedoWidgetState extends State<AccountSetupRedoWidget> {
                           children: [
                             Align(
                               alignment: AlignmentDirectional(-0.05, 0.56),
-                              child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    0.0, 20.0, 0.0, 20.0),
-                                child: Text(
-                                  'Not with us yet?',
-                                  textAlign: TextAlign.center,
-                                  style: FlutterFlowTheme.of(context)
-                                      .bodyMedium
-                                      .override(
-                                        fontFamily: 'Lexend',
-                                        color: Colors.black,
-                                        fontSize: 22.0,
-                                        fontWeight: FontWeight.w600,
-                                      ),
-                                ),
+                              child: Text(
+                                'Not with us yet?',
+                                textAlign: TextAlign.center,
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyMedium
+                                    .override(
+                                      fontFamily: 'Lexend',
+                                      color: Colors.black,
+                                      fontSize: 22.0,
+                                      fontWeight: FontWeight.w600,
+                                    ),
                               ),
                             ),
                           ],
@@ -472,7 +453,7 @@ class _AccountSetupRedoWidgetState extends State<AccountSetupRedoWidget> {
                             Align(
                               alignment: AlignmentDirectional(0.34, 0.68),
                               child: Text(
-                                'Create your own profile and join us!',
+                                '      Diam pulvinar pharetra nulla dolor nullam. Neque aliquam \n                         est amet scelerisque. Massa aenean.',
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
@@ -491,41 +472,33 @@ class _AccountSetupRedoWidgetState extends State<AccountSetupRedoWidget> {
                             mainAxisSize: MainAxisSize.max,
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Align(
-                                alignment: AlignmentDirectional(-0.05, 0.83),
-                                child: Padding(
+                              FFButtonWidget(
+                                onPressed: () async {
+                                  context.pushNamed('AccountSetup-Login');
+                                },
+                                text: 'Create Profile',
+                                options: FFButtonOptions(
+                                  width: 202.0,
+                                  height: 43.0,
                                   padding: EdgeInsetsDirectional.fromSTEB(
-                                      20.0, 20.0, 20.0, 20.0),
-                                  child: FFButtonWidget(
-                                    onPressed: () async {
-                                      context.pushNamed('Accountsetup2');
-                                    },
-                                    text: 'Create Profile',
-                                    options: FFButtonOptions(
-                                      width: 202.0,
-                                      height: 43.0,
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          0.0, 0.0, 0.0, 0.0),
-                                      iconPadding:
-                                          EdgeInsetsDirectional.fromSTEB(
-                                              0.0, 0.0, 0.0, 0.0),
-                                      color: Color(0xFFE4423F),
-                                      textStyle: FlutterFlowTheme.of(context)
-                                          .titleSmall
-                                          .override(
-                                            fontFamily: 'Readex Pro',
-                                            color: Colors.white,
-                                            fontSize: 18.0,
-                                            fontWeight: FontWeight.normal,
-                                          ),
-                                      elevation: 0.0,
-                                      borderSide: BorderSide(
-                                        color: Colors.transparent,
-                                        width: 1.0,
+                                      0.0, 0.0, 0.0, 0.0),
+                                  iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                      0.0, 0.0, 0.0, 0.0),
+                                  color: Color(0xFFE4423F),
+                                  textStyle: FlutterFlowTheme.of(context)
+                                      .titleSmall
+                                      .override(
+                                        fontFamily: 'Readex Pro',
+                                        color: Colors.white,
+                                        fontSize: 18.0,
+                                        fontWeight: FontWeight.normal,
                                       ),
-                                      borderRadius: BorderRadius.circular(28.0),
-                                    ),
+                                  elevation: 0.0,
+                                  borderSide: BorderSide(
+                                    color: Colors.transparent,
+                                    width: 1.0,
                                   ),
+                                  borderRadius: BorderRadius.circular(28.0),
                                 ),
                               ),
                             ],
@@ -535,8 +508,8 @@ class _AccountSetupRedoWidgetState extends State<AccountSetupRedoWidget> {
                     ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),

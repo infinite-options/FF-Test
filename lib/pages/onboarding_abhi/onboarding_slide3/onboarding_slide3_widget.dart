@@ -51,102 +51,105 @@ class _OnboardingSlide3WidgetState extends State<OnboardingSlide3Widget> {
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 25.0),
-                      child: RichText(
-                        text: TextSpan(
-                          children: [
-                            TextSpan(
-                              text: 'Get to know your matches ',
-                              style: FlutterFlowTheme.of(context)
-                                  .bodyMedium
-                                  .override(
-                                    fontFamily: 'Readex Pro',
-                                    color: FlutterFlowTheme.of(context)
-                                        .primaryText,
-                                    fontSize: 20.0,
-                                    fontWeight: FontWeight.w300,
-                                  ),
-                            ),
-                            TextSpan(
-                              text: 'better ',
-                              style: FlutterFlowTheme.of(context)
-                                  .bodyMedium
-                                  .override(
-                                    fontFamily: 'Readex Pro',
-                                    fontSize: 20.0,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                            ),
-                            TextSpan(
-                              text: 'with\n',
-                              style: FlutterFlowTheme.of(context)
-                                  .bodyMedium
-                                  .override(
-                                    fontFamily: 'Readex Pro',
-                                    fontSize: 20.0,
-                                    fontWeight: FontWeight.w300,
-                                  ),
-                            ),
-                            TextSpan(
-                              text: 'a profile ',
-                              style: FlutterFlowTheme.of(context)
-                                  .bodyMedium
-                                  .override(
-                                    fontFamily: 'Readex Pro',
-                                    fontSize: 20.0,
-                                    fontWeight: FontWeight.w300,
-                                  ),
-                            ),
-                            TextSpan(
-                              text: 'recording',
-                              style: FlutterFlowTheme.of(context)
-                                  .bodyMedium
-                                  .override(
-                                    fontFamily: 'Readex Pro',
-                                    fontSize: 20.0,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                            ),
-                            TextSpan(
-                              text: ', updated ',
-                              style: FlutterFlowTheme.of(context)
-                                  .bodyMedium
-                                  .override(
-                                    fontFamily: 'Readex Pro',
-                                    fontSize: 20.0,
-                                    fontWeight: FontWeight.w300,
-                                  ),
-                            ),
-                            TextSpan(
-                              text: 'yearly',
-                              style: FlutterFlowTheme.of(context)
-                                  .bodyMedium
-                                  .override(
-                                    fontFamily: 'Readex Pro',
-                                    fontSize: 20.0,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                            ),
-                            TextSpan(
-                              text: '.',
-                              style: FlutterFlowTheme.of(context)
-                                  .bodyMedium
-                                  .override(
-                                    fontFamily: 'Readex Pro',
-                                    fontSize: 20.0,
-                                    fontWeight: FontWeight.w300,
-                                  ),
-                            )
-                          ],
-                          style:
-                              FlutterFlowTheme.of(context).bodyMedium.override(
-                                    fontFamily: 'Lexend',
-                                    fontSize: 18.0,
-                                  ),
+                    Expanded(
+                      child: Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(
+                            0.0, 40.0, 0.0, 25.0),
+                        child: RichText(
+                          text: TextSpan(
+                            children: [
+                              TextSpan(
+                                text: 'Get to know your matches ',
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyMedium
+                                    .override(
+                                      fontFamily: 'Readex Pro',
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryText,
+                                      fontSize: 20.0,
+                                      fontWeight: FontWeight.w300,
+                                    ),
+                              ),
+                              TextSpan(
+                                text: 'better ',
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyMedium
+                                    .override(
+                                      fontFamily: 'Readex Pro',
+                                      fontSize: 20.0,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                              ),
+                              TextSpan(
+                                text: 'with\n',
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyMedium
+                                    .override(
+                                      fontFamily: 'Readex Pro',
+                                      fontSize: 20.0,
+                                      fontWeight: FontWeight.w300,
+                                    ),
+                              ),
+                              TextSpan(
+                                text: 'a profile ',
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyMedium
+                                    .override(
+                                      fontFamily: 'Readex Pro',
+                                      fontSize: 20.0,
+                                      fontWeight: FontWeight.w300,
+                                    ),
+                              ),
+                              TextSpan(
+                                text: 'recording',
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyMedium
+                                    .override(
+                                      fontFamily: 'Readex Pro',
+                                      fontSize: 20.0,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                              ),
+                              TextSpan(
+                                text: ', updated ',
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyMedium
+                                    .override(
+                                      fontFamily: 'Readex Pro',
+                                      fontSize: 20.0,
+                                      fontWeight: FontWeight.w300,
+                                    ),
+                              ),
+                              TextSpan(
+                                text: 'yearly',
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyMedium
+                                    .override(
+                                      fontFamily: 'Readex Pro',
+                                      fontSize: 20.0,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                              ),
+                              TextSpan(
+                                text: '.',
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyMedium
+                                    .override(
+                                      fontFamily: 'Readex Pro',
+                                      fontSize: 20.0,
+                                      fontWeight: FontWeight.w300,
+                                    ),
+                              )
+                            ],
+                            style: FlutterFlowTheme.of(context)
+                                .bodyMedium
+                                .override(
+                                  fontFamily: 'Lexend',
+                                  fontSize: 18.0,
+                                ),
+                          ),
+                          textAlign: TextAlign.center,
                         ),
-                        textAlign: TextAlign.center,
                       ),
                     ),
                   ],
@@ -163,12 +166,11 @@ class _OnboardingSlide3WidgetState extends State<OnboardingSlide3Widget> {
                               borderRadius: BorderRadius.circular(48.0),
                               child: Image.asset(
                                 'assets/images/mask_onb3.png',
-                                width: MediaQuery.of(context).size.width * 0.93,
                                 fit: BoxFit.contain,
                               ),
                             ),
                             Align(
-                              alignment: AlignmentDirectional(-0.86, 0.78),
+                              alignment: AlignmentDirectional(-0.9, 0.65),
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(8.0),
                                 child: Image.asset(
@@ -180,7 +182,7 @@ class _OnboardingSlide3WidgetState extends State<OnboardingSlide3Widget> {
                               ),
                             ),
                             Align(
-                              alignment: AlignmentDirectional(0.82, 0.7),
+                              alignment: AlignmentDirectional(0.72, 0.59),
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(8.0),
                                 child: Image.asset(
@@ -192,7 +194,7 @@ class _OnboardingSlide3WidgetState extends State<OnboardingSlide3Widget> {
                               ),
                             ),
                             Align(
-                              alignment: AlignmentDirectional(-0.82, -0.84),
+                              alignment: AlignmentDirectional(-0.84, -0.95),
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(8.0),
                                 child: Image.asset(
@@ -204,7 +206,7 @@ class _OnboardingSlide3WidgetState extends State<OnboardingSlide3Widget> {
                               ),
                             ),
                             Align(
-                              alignment: AlignmentDirectional(0.84, -0.85),
+                              alignment: AlignmentDirectional(0.78, -0.95),
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(8.0),
                                 child: Image.asset(
@@ -216,7 +218,7 @@ class _OnboardingSlide3WidgetState extends State<OnboardingSlide3Widget> {
                               ),
                             ),
                             Align(
-                              alignment: AlignmentDirectional(0.0, -0.85),
+                              alignment: AlignmentDirectional(-0.04, -0.95),
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(8.0),
                                 child: Image.asset(

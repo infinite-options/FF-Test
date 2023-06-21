@@ -6,26 +6,27 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'account_setup1_create_model.dart';
-export 'account_setup1_create_model.dart';
+import 'account_setup_createold_model.dart';
+export 'account_setup_createold_model.dart';
 
-class AccountSetup1CreateWidget extends StatefulWidget {
-  const AccountSetup1CreateWidget({Key? key}) : super(key: key);
+class AccountSetupCreateoldWidget extends StatefulWidget {
+  const AccountSetupCreateoldWidget({Key? key}) : super(key: key);
 
   @override
-  _AccountSetup1CreateWidgetState createState() =>
-      _AccountSetup1CreateWidgetState();
+  _AccountSetupCreateoldWidgetState createState() =>
+      _AccountSetupCreateoldWidgetState();
 }
 
-class _AccountSetup1CreateWidgetState extends State<AccountSetup1CreateWidget> {
-  late AccountSetup1CreateModel _model;
+class _AccountSetupCreateoldWidgetState
+    extends State<AccountSetupCreateoldWidget> {
+  late AccountSetupCreateoldModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => AccountSetup1CreateModel());
+    _model = createModel(context, () => AccountSetupCreateoldModel());
 
     _model.emailController ??= TextEditingController();
     _model.passwordController ??= TextEditingController();
@@ -57,7 +58,7 @@ class _AccountSetup1CreateWidgetState extends State<AccountSetup1CreateWidget> {
             child: Stack(
               children: [
                 Align(
-                  alignment: AlignmentDirectional(0.0, -1.0),
+                  alignment: AlignmentDirectional(0.0, -1.01),
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(0.0),
                     child: Image.asset(
@@ -436,7 +437,7 @@ class _AccountSetup1CreateWidgetState extends State<AccountSetup1CreateWidget> {
                   alignment: AlignmentDirectional(0.0, 0.0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
-                    mainAxisAlignment: MainAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Align(
                         alignment: AlignmentDirectional(-0.05, 0.83),

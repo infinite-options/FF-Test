@@ -136,12 +136,13 @@ class _OnboardingSlide2WidgetState extends State<OnboardingSlide2Widget> {
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(48.0),
-                        child: Image.asset(
-                          'assets/images/mask_onb2.png',
-                          width: MediaQuery.of(context).size.width * 0.93,
-                          fit: BoxFit.contain,
+                      Expanded(
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(48.0),
+                          child: Image.asset(
+                            'assets/images/mask_onb2.png',
+                            fit: BoxFit.contain,
+                          ),
                         ),
                       ),
                     ],
