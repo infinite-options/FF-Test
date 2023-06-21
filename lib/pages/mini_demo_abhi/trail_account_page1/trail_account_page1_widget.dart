@@ -144,7 +144,7 @@ class _TrailAccountPage1WidgetState extends State<TrailAccountPage1Widget> {
                             ),
                             child: Padding(
                               padding: EdgeInsetsDirectional.fromSTEB(
-                                  20.0, 0.0, 20.0, 0.0),
+                                  10.0, 0.0, 10.0, 0.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
                                 mainAxisAlignment:
