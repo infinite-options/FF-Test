@@ -5,25 +5,27 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'onboarding_slide3_model.dart';
-export 'onboarding_slide3_model.dart';
+import 'onboarding_slide3_copy_model.dart';
+export 'onboarding_slide3_copy_model.dart';
 
-class OnboardingSlide3Widget extends StatefulWidget {
-  const OnboardingSlide3Widget({Key? key}) : super(key: key);
+class OnboardingSlide3CopyWidget extends StatefulWidget {
+  const OnboardingSlide3CopyWidget({Key? key}) : super(key: key);
 
   @override
-  _OnboardingSlide3WidgetState createState() => _OnboardingSlide3WidgetState();
+  _OnboardingSlide3CopyWidgetState createState() =>
+      _OnboardingSlide3CopyWidgetState();
 }
 
-class _OnboardingSlide3WidgetState extends State<OnboardingSlide3Widget> {
-  late OnboardingSlide3Model _model;
+class _OnboardingSlide3CopyWidgetState
+    extends State<OnboardingSlide3CopyWidget> {
+  late OnboardingSlide3CopyModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => OnboardingSlide3Model());
+    _model = createModel(context, () => OnboardingSlide3CopyModel());
   }
 
   @override
@@ -160,12 +162,96 @@ class _OnboardingSlide3WidgetState extends State<OnboardingSlide3Widget> {
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       Expanded(
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(48.0),
-                          child: Image.asset(
-                            'assets/images/mask_onb3.png',
-                            fit: BoxFit.contain,
-                          ),
+                        child: Stack(
+                          children: [
+                            Align(
+                              alignment: AlignmentDirectional(-0.59, -0.31),
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(48.0),
+                                child: Image.asset(
+                                  'assets/images/mask_onb3.png',
+                                  fit: BoxFit.contain,
+                                ),
+                              ),
+                            ),
+                            Align(
+                              alignment: AlignmentDirectional(3.68, 0.0),
+                              child: Row(
+                                mainAxisSize: MainAxisSize.max,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                crossAxisAlignment: CrossAxisAlignment.stretch,
+                                children: [
+                                  Align(
+                                    alignment: AlignmentDirectional(0.77, 0.64),
+                                    child: ClipRRect(
+                                      borderRadius: BorderRadius.circular(8.0),
+                                      child: Image.asset(
+                                        'assets/images/button_lets_start-1.png',
+                                        width: 150.0,
+                                        height: 100.0,
+                                        fit: BoxFit.contain,
+                                      ),
+                                    ),
+                                  ),
+                                  Align(
+                                    alignment: AlignmentDirectional(0.72, 0.59),
+                                    child: ClipRRect(
+                                      borderRadius: BorderRadius.circular(8.0),
+                                      child: Image.asset(
+                                        'assets/images/button_lets_start.png',
+                                        width: 150.0,
+                                        height: 52.0,
+                                        fit: BoxFit.contain,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            Row(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              children: [
+                                Align(
+                                  alignment: AlignmentDirectional(-0.04, -0.95),
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(8.0),
+                                    child: Image.asset(
+                                      'assets/images/record_time.png',
+                                      width: 100.0,
+                                      height: 32.0,
+                                      fit: BoxFit.contain,
+                                    ),
+                                  ),
+                                ),
+                                Align(
+                                  alignment: AlignmentDirectional(-0.84, -0.95),
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(8.0),
+                                    child: Image.asset(
+                                      'assets/images/back_button-1.png',
+                                      width: 32.0,
+                                      height: 32.0,
+                                      fit: BoxFit.contain,
+                                    ),
+                                  ),
+                                ),
+                                Align(
+                                  alignment: AlignmentDirectional(0.78, -0.95),
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(8.0),
+                                    child: Image.asset(
+                                      'assets/images/faq_button.png',
+                                      width: 32.0,
+                                      height: 32.0,
+                                      fit: BoxFit.contain,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
                         ),
                       ),
                     ],

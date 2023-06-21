@@ -101,8 +101,8 @@ export '/pages/account_setup_sailesh/account_setup1_create_copy/account_setup1_c
     show AccountSetup1CreateCopyWidget;
 export '/pages/onboarding_abhi/onboarding_slide2/onboarding_slide2_widget.dart'
     show OnboardingSlide2Widget;
-export '/pages/onboarding_abhi/onboarding_slide3/onboarding_slide3_widget.dart'
-    show OnboardingSlide3Widget;
+export '/pages/onboarding_abhi/onboarding_slide3old/onboarding_slide3old_widget.dart'
+    show OnboardingSlide3oldWidget;
 export '/pages/onboarding_abhi/onboarding_slide4/onboarding_slide4_widget.dart'
     show OnboardingSlide4Widget;
 export '/pages/mini_demo_abhi/trail_account_page2/trail_account_page2_widget.dart'
@@ -113,3 +113,7 @@ export '/pages/account_setup_sailesh/account_setup_create/account_setup_create_w
     show AccountSetupCreateWidget;
 export '/pages/account_setup_sailesh/account_setup_login/account_setup_login_widget.dart'
     show AccountSetupLoginWidget;
+export '/pages/onboarding_abhi/onboarding_slide3_copy/onboarding_slide3_copy_widget.dart'
+    show OnboardingSlide3CopyWidget;
+export '/pages/onboarding_abhi/onboarding_slide3/onboarding_slide3_widget.dart'
+    show OnboardingSlide3Widget;

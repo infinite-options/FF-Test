@@ -413,9 +413,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => OnboardingSlide2Widget(),
         ),
         FFRoute(
-          name: 'onboarding_slide3',
-          path: '/onboardingSlide3',
-          builder: (context, params) => OnboardingSlide3Widget(),
+          name: 'onboarding_slide3old',
+          path: '/onboardingSlide3old',
+          builder: (context, params) => OnboardingSlide3oldWidget(),
         ),
         FFRoute(
           name: 'onboarding_slide4',
@@ -441,6 +441,16 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'AccountSetup-Login',
           path: '/accountSetupLogin',
           builder: (context, params) => AccountSetupLoginWidget(),
+        ),
+        FFRoute(
+          name: 'onboarding_slide3Copy',
+          path: '/onboardingSlide3Copy',
+          builder: (context, params) => OnboardingSlide3CopyWidget(),
+        ),
+        FFRoute(
+          name: 'onboarding_slide3',
+          path: '/onboardingSlide3',
+          builder: (context, params) => OnboardingSlide3Widget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
