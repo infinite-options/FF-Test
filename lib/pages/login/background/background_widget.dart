@@ -22,6 +22,8 @@ class _BackgroundWidgetState extends State<BackgroundWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => BackgroundModel());
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override

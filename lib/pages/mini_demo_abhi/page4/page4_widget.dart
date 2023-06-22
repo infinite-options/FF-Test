@@ -24,6 +24,8 @@ class _Page4WidgetState extends State<Page4Widget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => Page4Model());
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override

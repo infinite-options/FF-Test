@@ -27,6 +27,7 @@ class _Settings4CopyWidgetState extends State<Settings4CopyWidget> {
 
     _model.textController1 ??= TextEditingController();
     _model.textController2 ??= TextEditingController();
+    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override

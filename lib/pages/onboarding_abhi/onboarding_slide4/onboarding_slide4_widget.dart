@@ -24,6 +24,8 @@ class _OnboardingSlide4WidgetState extends State<OnboardingSlide4Widget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => OnboardingSlide4Model());
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override

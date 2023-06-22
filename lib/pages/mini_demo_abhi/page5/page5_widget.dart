@@ -23,6 +23,8 @@ class _Page5WidgetState extends State<Page5Widget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => Page5Model());
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override

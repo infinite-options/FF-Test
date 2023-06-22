@@ -23,6 +23,8 @@ class _APIExampleWidgetState extends State<APIExampleWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => APIExampleModel());
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override

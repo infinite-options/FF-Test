@@ -25,6 +25,8 @@ class _ProfilePage6WidgetState extends State<ProfilePage6Widget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => ProfilePage6Model());
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override

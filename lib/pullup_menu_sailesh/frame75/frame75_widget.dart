@@ -23,6 +23,8 @@ class _Frame75WidgetState extends State<Frame75Widget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => Frame75Model());
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override

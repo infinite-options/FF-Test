@@ -31,6 +31,7 @@ class _AccountSetup1WidgetState extends State<AccountSetup1Widget> {
         TextEditingController(text: 'Lachlan@konnectdigital.io');
     _model.passwordController ??=
         TextEditingController(text: '. . . . . . . . . .');
+    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override

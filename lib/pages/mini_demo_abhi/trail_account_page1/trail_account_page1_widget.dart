@@ -26,6 +26,8 @@ class _TrailAccountPage1WidgetState extends State<TrailAccountPage1Widget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => TrailAccountPage1Model());
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override
@@ -54,7 +56,7 @@ class _TrailAccountPage1WidgetState extends State<TrailAccountPage1Widget> {
                     'assets/images/unsplash_rotAnvHj4FM.png',
                     width: double.infinity,
                     height: double.infinity,
-                    fit: BoxFit.fill,
+                    fit: BoxFit.contain,
                   ),
                 ),
               ),

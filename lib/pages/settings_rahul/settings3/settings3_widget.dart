@@ -24,6 +24,8 @@ class _Settings3WidgetState extends State<Settings3Widget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => Settings3Model());
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override

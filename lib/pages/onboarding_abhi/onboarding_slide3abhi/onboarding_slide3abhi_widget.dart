@@ -26,6 +26,8 @@ class _OnboardingSlide3abhiWidgetState
   void initState() {
     super.initState();
     _model = createModel(context, () => OnboardingSlide3abhiModel());
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override

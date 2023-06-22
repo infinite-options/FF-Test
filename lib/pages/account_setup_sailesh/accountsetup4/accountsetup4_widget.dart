@@ -24,6 +24,8 @@ class _Accountsetup4WidgetState extends State<Accountsetup4Widget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => Accountsetup4Model());
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override

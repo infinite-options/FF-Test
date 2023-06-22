@@ -25,6 +25,7 @@ class _Settings4WidgetState extends State<Settings4Widget> {
     _model = createModel(context, () => Settings4Model());
 
     _model.textController ??= TextEditingController();
+    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override

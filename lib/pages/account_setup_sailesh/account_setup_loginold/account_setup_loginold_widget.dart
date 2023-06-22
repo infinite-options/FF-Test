@@ -31,6 +31,7 @@ class _AccountSetupLoginoldWidgetState
     _model.emailController ??= TextEditingController();
     _model.passwordController ??= TextEditingController();
     _model.confirmPasswordController ??= TextEditingController();
+    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override

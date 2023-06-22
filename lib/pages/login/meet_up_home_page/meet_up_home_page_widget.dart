@@ -22,6 +22,8 @@ class _MeetUpHomePageWidgetState extends State<MeetUpHomePageWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => MeetUpHomePageModel());
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override

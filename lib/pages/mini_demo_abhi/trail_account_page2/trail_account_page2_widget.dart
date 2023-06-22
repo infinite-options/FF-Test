@@ -26,6 +26,8 @@ class _TrailAccountPage2WidgetState extends State<TrailAccountPage2Widget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => TrailAccountPage2Model());
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override

@@ -25,6 +25,8 @@ class _LetsMeet3WidgetState extends State<LetsMeet3Widget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => LetsMeet3Model());
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override

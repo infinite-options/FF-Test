@@ -23,6 +23,8 @@ class _Page2WidgetState extends State<Page2Widget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => Page2Model());
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override

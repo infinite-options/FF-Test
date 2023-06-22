@@ -97,8 +97,6 @@ export '/pullup_menu_sailesh/frame83/frame83_widget.dart' show Frame83Widget;
 export '/pullup_menu_sailesh/frame84/frame84_widget.dart' show Frame84Widget;
 export '/pages/account_setup_sailesh/account_setup_loginold/account_setup_loginold_widget.dart'
     show AccountSetupLoginoldWidget;
-export '/pages/account_setup_sailesh/account_setup1_create_copy/account_setup1_create_copy_widget.dart'
-    show AccountSetup1CreateCopyWidget;
 export '/pages/onboarding_abhi/onboarding_slide2/onboarding_slide2_widget.dart'
     show OnboardingSlide2Widget;
 export '/pages/onboarding_abhi/onboarding_slide3old/onboarding_slide3old_widget.dart'
@@ -117,3 +115,15 @@ export '/pages/onboarding_abhi/onboarding_slide3_copy/onboarding_slide3_copy_wid
     show OnboardingSlide3CopyWidget;
 export '/pages/onboarding_abhi/onboarding_slide3/onboarding_slide3_widget.dart'
     show OnboardingSlide3Widget;
+export '/pages/account_setup_sailesh/accountsetup2_copy/accountsetup2_copy_widget.dart'
+    show Accountsetup2CopyWidget;
+export '/pages/account_setup_sailesh/accountsetup3_copy/accountsetup3_copy_widget.dart'
+    show Accountsetup3CopyWidget;
+export '/pages/account_setup_sailesh/accountsetup1_copy/accountsetup1_copy_widget.dart'
+    show Accountsetup1CopyWidget;
+export '/pages/account_setup_sailesh/accountsetup2_copy_extra/accountsetup2_copy_extra_widget.dart'
+    show Accountsetup2CopyExtraWidget;
+export '/pages/account_setup_sailesh/accountsetup2a_copy/accountsetup2a_copy_widget.dart'
+    show Accountsetup2aCopyWidget;
+export '/pages/account_setup_sailesh/accountsetup4a_copy/accountsetup4a_copy_widget.dart'
+    show Accountsetup4aCopyWidget;

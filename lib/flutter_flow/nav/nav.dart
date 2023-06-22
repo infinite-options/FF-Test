@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:page_transition/page_transition.dart';
+import '/flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow_theme.dart';
 import '/backend/backend.dart';
 
@@ -403,11 +404,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => AccountSetupLoginoldWidget(),
         ),
         FFRoute(
-          name: 'AccountSetup1CreateCopy',
-          path: '/accountSetup1CreateCopy',
-          builder: (context, params) => AccountSetup1CreateCopyWidget(),
-        ),
-        FFRoute(
           name: 'onboarding_slide2',
           path: '/onboardingSlide2',
           builder: (context, params) => OnboardingSlide2Widget(),
@@ -451,8 +447,39 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'onboarding_slide3',
           path: '/onboardingSlide3',
           builder: (context, params) => OnboardingSlide3Widget(),
+        ),
+        FFRoute(
+          name: 'Accountsetup2Copy',
+          path: '/accountsetup2Copy',
+          builder: (context, params) => Accountsetup2CopyWidget(),
+        ),
+        FFRoute(
+          name: 'Accountsetup3Copy',
+          path: '/accountsetup3Copy',
+          builder: (context, params) => Accountsetup3CopyWidget(),
+        ),
+        FFRoute(
+          name: 'Accountsetup1Copy',
+          path: '/accountsetup1Copy',
+          builder: (context, params) => Accountsetup1CopyWidget(),
+        ),
+        FFRoute(
+          name: 'Accountsetup2CopyExtra',
+          path: '/accountsetup2CopyExtra',
+          builder: (context, params) => Accountsetup2CopyExtraWidget(),
+        ),
+        FFRoute(
+          name: 'Accountsetup2aCopy',
+          path: '/accountsetup2aCopy',
+          builder: (context, params) => Accountsetup2aCopyWidget(),
+        ),
+        FFRoute(
+          name: 'Accountsetup4aCopy',
+          path: '/accountsetup4aCopy',
+          builder: (context, params) => Accountsetup4aCopyWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
+      observers: [routeObserver],
     );
 
 extension NavParamExtensions on Map<String, String?> {

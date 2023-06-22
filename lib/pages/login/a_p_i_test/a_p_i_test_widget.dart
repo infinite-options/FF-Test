@@ -24,6 +24,8 @@ class _APITestWidgetState extends State<APITestWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => APITestModel());
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override

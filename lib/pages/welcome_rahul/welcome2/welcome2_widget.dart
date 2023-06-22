@@ -26,6 +26,7 @@ class _Welcome2WidgetState extends State<Welcome2Widget> {
     _model = createModel(context, () => Welcome2Model());
 
     _model.textController ??= TextEditingController();
+    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override

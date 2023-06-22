@@ -26,6 +26,8 @@ class _OnboardingSlide3CopyWidgetState
   void initState() {
     super.initState();
     _model = createModel(context, () => OnboardingSlide3CopyModel());
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override

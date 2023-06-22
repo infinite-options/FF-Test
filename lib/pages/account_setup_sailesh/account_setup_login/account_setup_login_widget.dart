@@ -28,6 +28,7 @@ class _AccountSetupLoginWidgetState extends State<AccountSetupLoginWidget> {
 
     _model.emailController ??= TextEditingController();
     _model.passwordController ??= TextEditingController();
+    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override

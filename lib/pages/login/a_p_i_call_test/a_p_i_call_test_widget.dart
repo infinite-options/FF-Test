@@ -24,6 +24,8 @@ class _APICallTestWidgetState extends State<APICallTestWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => APICallTestModel());
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override
