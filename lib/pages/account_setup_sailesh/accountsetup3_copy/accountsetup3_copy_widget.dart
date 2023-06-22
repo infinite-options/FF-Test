@@ -352,13 +352,22 @@ class _Accountsetup3CopyWidgetState extends State<Accountsetup3CopyWidget> {
                       ),
                     ],
                   ),
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(8.0),
-                    child: Image.asset(
-                      'assets/images/Next_Bubble_Button_130pt.png',
-                      width: 140.0,
-                      height: 45.0,
-                      fit: BoxFit.contain,
+                  InkWell(
+                    splashColor: Colors.transparent,
+                    focusColor: Colors.transparent,
+                    hoverColor: Colors.transparent,
+                    highlightColor: Colors.transparent,
+                    onTap: () async {
+                      context.pushNamed('Accountsetup4aCopy');
+                    },
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(8.0),
+                      child: Image.asset(
+                        'assets/images/Next_Bubble_Button_130pt.png',
+                        width: 140.0,
+                        height: 45.0,
+                        fit: BoxFit.contain,
+                      ),
                     ),
                   ),
                 ],

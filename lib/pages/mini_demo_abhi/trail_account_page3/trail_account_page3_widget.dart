@@ -234,7 +234,7 @@ class _TrailAccountPage3WidgetState extends State<TrailAccountPage3Widget> {
                             EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 0.0),
                         child: FFButtonWidget(
                           onPressed: () async {
-                            context.pushNamed('AccountSetup-Create');
+                            context.pushNamed('AccountSetup-Login');
                           },
                           text: 'Start',
                           options: FFButtonOptions(

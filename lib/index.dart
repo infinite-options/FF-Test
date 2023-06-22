@@ -64,8 +64,6 @@ export '/pages/lets_meet_rahul/lets_meet4/lets_meet4_widget.dart'
 export '/pages/welcome_rahul/welcome1/welcome1_widget.dart' show Welcome1Widget;
 export '/pages/welcome_rahul/welcome2/welcome2_widget.dart' show Welcome2Widget;
 export '/pages/welcome_rahul/welcome3/welcome3_widget.dart' show Welcome3Widget;
-export '/pages/account_setup_sailesh/account_setup1/account_setup1_widget.dart'
-    show AccountSetup1Widget;
 export '/pages/account_setup_sailesh/accountsetup5/accountsetup5_widget.dart'
     show Accountsetup5Widget;
 export '/pages/account_setup_sailesh/accountsetup2/accountsetup2_widget.dart'
@@ -83,8 +81,6 @@ export '/pullup_menu_sailesh/frame70/frame70_widget.dart' show Frame70Widget;
 export '/pullup_menu_sailesh/frame72/frame72_widget.dart' show Frame72Widget;
 export '/pullup_menu_sailesh/frame73/frame73_widget.dart' show Frame73Widget;
 export '/pullup_menu_sailesh/frame74/frame74_widget.dart' show Frame74Widget;
-export '/pages/account_setup_sailesh/account_setup_createold/account_setup_createold_widget.dart'
-    show AccountSetupCreateoldWidget;
 export '/pullup_menu_sailesh/frame71/frame71_widget.dart' show Frame71Widget;
 export '/pullup_menu_sailesh/frame75/frame75_widget.dart' show Frame75Widget;
 export '/pullup_menu_sailesh/frame76/frame76_widget.dart' show Frame76Widget;
@@ -95,8 +91,6 @@ export '/pullup_menu_sailesh/frame81/frame81_widget.dart' show Frame81Widget;
 export '/pullup_menu_sailesh/frame82/frame82_widget.dart' show Frame82Widget;
 export '/pullup_menu_sailesh/frame83/frame83_widget.dart' show Frame83Widget;
 export '/pullup_menu_sailesh/frame84/frame84_widget.dart' show Frame84Widget;
-export '/pages/account_setup_sailesh/account_setup_loginold/account_setup_loginold_widget.dart'
-    show AccountSetupLoginoldWidget;
 export '/pages/onboarding_abhi/onboarding_slide2/onboarding_slide2_widget.dart'
     show OnboardingSlide2Widget;
 export '/pages/onboarding_abhi/onboarding_slide3old/onboarding_slide3old_widget.dart'
@@ -127,3 +121,5 @@ export '/pages/account_setup_sailesh/accountsetup2a_copy/accountsetup2a_copy_wid
     show Accountsetup2aCopyWidget;
 export '/pages/account_setup_sailesh/accountsetup4a_copy/accountsetup4a_copy_widget.dart'
     show Accountsetup4aCopyWidget;
+export '/pages/account_setup_sailesh/accountsetup4b_copy/accountsetup4b_copy_widget.dart'
+    show Accountsetup4bCopyWidget;

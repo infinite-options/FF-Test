@@ -1,6 +1,9 @@
+import '/auth/firebase_auth/auth_util.dart';
+import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -453,13 +456,30 @@ class _Accountsetup2CopyWidgetState extends State<Accountsetup2CopyWidget> {
                 ),
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(8.0),
-                    child: Image.asset(
-                      'assets/images/Record-a-Video-button.png',
-                      width: 300.0,
-                      height: 70.0,
-                      fit: BoxFit.contain,
+                  child: InkWell(
+                    splashColor: Colors.transparent,
+                    focusColor: Colors.transparent,
+                    hoverColor: Colors.transparent,
+                    highlightColor: Colors.transparent,
+                    onTap: () async {
+                      final usersUpdateData = createUsersRecordData(
+                        fullName: _model.textController1.text,
+                        age: int.tryParse(_model.textController2.text),
+                        gender: _model.textController3.text,
+                        suburb: _model.textController4.text,
+                      );
+                      await currentUserReference!.update(usersUpdateData);
+
+                      context.pushNamed('Accountsetup2CopyExtra');
+                    },
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(8.0),
+                      child: Image.asset(
+                        'assets/images/Next_Bubble_Button_130pt.png',
+                        width: 300.0,
+                        height: 70.0,
+                        fit: BoxFit.contain,
+                      ),
                     ),
                   ),
                 ),

@@ -4,26 +4,26 @@ import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'accountsetup4a_copy_model.dart';
-export 'accountsetup4a_copy_model.dart';
+import 'accountsetup4b_copy_model.dart';
+export 'accountsetup4b_copy_model.dart';
 
-class Accountsetup4aCopyWidget extends StatefulWidget {
-  const Accountsetup4aCopyWidget({Key? key}) : super(key: key);
+class Accountsetup4bCopyWidget extends StatefulWidget {
+  const Accountsetup4bCopyWidget({Key? key}) : super(key: key);
 
   @override
-  _Accountsetup4aCopyWidgetState createState() =>
-      _Accountsetup4aCopyWidgetState();
+  _Accountsetup4bCopyWidgetState createState() =>
+      _Accountsetup4bCopyWidgetState();
 }
 
-class _Accountsetup4aCopyWidgetState extends State<Accountsetup4aCopyWidget> {
-  late Accountsetup4aCopyModel _model;
+class _Accountsetup4bCopyWidgetState extends State<Accountsetup4bCopyWidget> {
+  late Accountsetup4bCopyModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => Accountsetup4aCopyModel());
+    _model = createModel(context, () => Accountsetup4bCopyModel());
 
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
@@ -87,7 +87,7 @@ class _Accountsetup4aCopyWidgetState extends State<Accountsetup4aCopyWidget> {
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 30.0, 0.0, 0.0),
                                 child: Text(
-                                  'Profile Creation',
+                                  'Information Captured',
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
@@ -120,7 +120,7 @@ class _Accountsetup4aCopyWidgetState extends State<Accountsetup4aCopyWidget> {
                           padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 10.0, 0.0, 10.0),
                           child: Text(
-                            'When Are You Available?',
+                            'Summary',
                             textAlign: TextAlign.start,
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
@@ -200,22 +200,13 @@ class _Accountsetup4aCopyWidgetState extends State<Accountsetup4aCopyWidget> {
                   Padding(
                     padding:
                         EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
-                    child: InkWell(
-                      splashColor: Colors.transparent,
-                      focusColor: Colors.transparent,
-                      hoverColor: Colors.transparent,
-                      highlightColor: Colors.transparent,
-                      onTap: () async {
-                        context.pushNamed('Accountsetup4bCopy');
-                      },
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(8.0),
-                        child: Image.asset(
-                          'assets/images/Next_Bubble_Button_130pt.png',
-                          width: 300.0,
-                          height: 70.0,
-                          fit: BoxFit.contain,
-                        ),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(8.0),
+                      child: Image.asset(
+                        'assets/images/Next_Bubble_Button_130pt.png',
+                        width: 300.0,
+                        height: 70.0,
+                        fit: BoxFit.contain,
                       ),
                     ),
                   ),

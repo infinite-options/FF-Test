@@ -274,11 +274,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => Welcome3Widget(),
         ),
         FFRoute(
-          name: 'AccountSetup1',
-          path: '/accountSetup1',
-          builder: (context, params) => AccountSetup1Widget(),
-        ),
-        FFRoute(
           name: 'Accountsetup5',
           path: '/accountsetup5',
           builder: (context, params) => Accountsetup5Widget(),
@@ -344,11 +339,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => Frame74Widget(),
         ),
         FFRoute(
-          name: 'AccountSetup-Createold',
-          path: '/accountSetupCreateold',
-          builder: (context, params) => AccountSetupCreateoldWidget(),
-        ),
-        FFRoute(
           name: 'Frame71',
           path: '/frame71',
           builder: (context, params) => Frame71Widget(),
@@ -397,11 +387,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'Frame84',
           path: '/frame84',
           builder: (context, params) => Frame84Widget(),
-        ),
-        FFRoute(
-          name: 'AccountSetup-Loginold',
-          path: '/accountSetupLoginold',
-          builder: (context, params) => AccountSetupLoginoldWidget(),
         ),
         FFRoute(
           name: 'onboarding_slide2',
@@ -477,6 +462,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'Accountsetup4aCopy',
           path: '/accountsetup4aCopy',
           builder: (context, params) => Accountsetup4aCopyWidget(),
+        ),
+        FFRoute(
+          name: 'Accountsetup4bCopy',
+          path: '/accountsetup4bCopy',
+          builder: (context, params) => Accountsetup4bCopyWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
       observers: [routeObserver],

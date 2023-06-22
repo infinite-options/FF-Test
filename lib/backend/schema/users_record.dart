@@ -49,6 +49,51 @@ class UsersRecord extends FirestoreRecord {
   String get videoUrl => _videoUrl ?? '';
   bool hasVideoUrl() => _videoUrl != null;
 
+  // "age" field.
+  int? _age;
+  int get age => _age ?? 0;
+  bool hasAge() => _age != null;
+
+  // "full_name" field.
+  String? _fullName;
+  String get fullName => _fullName ?? '';
+  bool hasFullName() => _fullName != null;
+
+  // "user_interests" field.
+  List<String>? _userInterests;
+  List<String> get userInterests => _userInterests ?? const [];
+  bool hasUserInterests() => _userInterests != null;
+
+  // "gender" field.
+  String? _gender;
+  String get gender => _gender ?? '';
+  bool hasGender() => _gender != null;
+
+  // "address" field.
+  String? _address;
+  String get address => _address ?? '';
+  bool hasAddress() => _address != null;
+
+  // "suburb" field.
+  String? _suburb;
+  String get suburb => _suburb ?? '';
+  bool hasSuburb() => _suburb != null;
+
+  // "state" field.
+  String? _state;
+  String get state => _state ?? '';
+  bool hasState() => _state != null;
+
+  // "country" field.
+  String? _country;
+  String get country => _country ?? '';
+  bool hasCountry() => _country != null;
+
+  // "zip" field.
+  String? _zip;
+  String get zip => _zip ?? '';
+  bool hasZip() => _zip != null;
+
   void _initializeFields() {
     _email = snapshotData['email'] as String?;
     _displayName = snapshotData['display_name'] as String?;
@@ -57,6 +102,15 @@ class UsersRecord extends FirestoreRecord {
     _createdTime = snapshotData['created_time'] as DateTime?;
     _phoneNumber = snapshotData['phone_number'] as String?;
     _videoUrl = snapshotData['video_url'] as String?;
+    _age = snapshotData['age'] as int?;
+    _fullName = snapshotData['full_name'] as String?;
+    _userInterests = getDataList(snapshotData['user_interests']);
+    _gender = snapshotData['gender'] as String?;
+    _address = snapshotData['address'] as String?;
+    _suburb = snapshotData['suburb'] as String?;
+    _state = snapshotData['state'] as String?;
+    _country = snapshotData['country'] as String?;
+    _zip = snapshotData['zip'] as String?;
   }
 
   static CollectionReference get collection =>
@@ -100,6 +154,14 @@ Map<String, dynamic> createUsersRecordData({
   DateTime? createdTime,
   String? phoneNumber,
   String? videoUrl,
+  int? age,
+  String? fullName,
+  String? gender,
+  String? address,
+  String? suburb,
+  String? state,
+  String? country,
+  String? zip,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
@@ -110,6 +172,14 @@ Map<String, dynamic> createUsersRecordData({
       'created_time': createdTime,
       'phone_number': phoneNumber,
       'video_url': videoUrl,
+      'age': age,
+      'full_name': fullName,
+      'gender': gender,
+      'address': address,
+      'suburb': suburb,
+      'state': state,
+      'country': country,
+      'zip': zip,
     }.withoutNulls,
   );
 

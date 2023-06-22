@@ -377,7 +377,7 @@ class _AccountSetupLoginWidgetState extends State<AccountSetupLoginWidget> {
                             children: [
                               FFButtonWidget(
                                 onPressed: () async {
-                                  context.pushNamed('AccountSetup-Create');
+                                  context.pushNamed('Accountsetup1Copy');
                                 },
                                 text: 'Create Account',
                                 options: FFButtonOptions(

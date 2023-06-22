@@ -1,5 +1,3 @@
-import '/auth/firebase_auth/auth_util.dart';
-import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -364,39 +362,8 @@ class _AccountSetupCreateWidgetState extends State<AccountSetupCreateWidget> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               FFButtonWidget(
-                                onPressed: () async {
-                                  GoRouter.of(context).prepareAuthEvent();
-                                  if (_model.passwordController.text !=
-                                      _model.confirmPasswordController.text) {
-                                    ScaffoldMessenger.of(context).showSnackBar(
-                                      SnackBar(
-                                        content: Text(
-                                          'Passwords don\'t match!',
-                                        ),
-                                      ),
-                                    );
-                                    return;
-                                  }
-
-                                  final user =
-                                      await authManager.createAccountWithEmail(
-                                    context,
-                                    _model.emailController.text,
-                                    _model.passwordController.text,
-                                  );
-                                  if (user == null) {
-                                    return;
-                                  }
-
-                                  final usersCreateData = createUsersRecordData(
-                                    email: '',
-                                  );
-                                  await UsersRecord.collection
-                                      .doc(user.uid)
-                                      .update(usersCreateData);
-
-                                  context.goNamedAuth(
-                                      'TrailAccountPage2', context.mounted);
+                                onPressed: () {
+                                  print('Button pressed ...');
                                 },
                                 text: 'Create Account',
                                 options: FFButtonOptions(
@@ -474,8 +441,8 @@ class _AccountSetupCreateWidgetState extends State<AccountSetupCreateWidget> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               FFButtonWidget(
-                                onPressed: () async {
-                                  context.pushNamed('AccountSetup-Login');
+                                onPressed: () {
+                                  print('Button pressed ...');
                                 },
                                 text: 'Create Profile',
                                 options: FFButtonOptions(

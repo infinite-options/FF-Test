@@ -1,3 +1,5 @@
+import '/auth/firebase_auth/auth_util.dart';
+import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -26,10 +28,10 @@ class _Accountsetup1CopyWidgetState extends State<Accountsetup1CopyWidget> {
     super.initState();
     _model = createModel(context, () => Accountsetup1CopyModel());
 
-    _model.textController1 ??= TextEditingController();
-    _model.textController2 ??= TextEditingController();
-    _model.textController3 ??= TextEditingController();
-    _model.textController4 ??= TextEditingController();
+    _model.emailController ??= TextEditingController();
+    _model.phoneNumberController ??= TextEditingController();
+    _model.passwordController ??= TextEditingController();
+    _model.confirmController ??= TextEditingController();
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
@@ -164,7 +166,7 @@ class _Accountsetup1CopyWidgetState extends State<Accountsetup1CopyWidget> {
                           padding: EdgeInsetsDirectional.fromSTEB(
                               8.0, 0.0, 8.0, 0.0),
                           child: TextFormField(
-                            controller: _model.textController1,
+                            controller: _model.emailController,
                             autofocus: true,
                             obscureText: false,
                             decoration: InputDecoration(
@@ -208,7 +210,7 @@ class _Accountsetup1CopyWidgetState extends State<Accountsetup1CopyWidget> {
                               filled: true,
                             ),
                             style: FlutterFlowTheme.of(context).bodyMedium,
-                            validator: _model.textController1Validator
+                            validator: _model.emailControllerValidator
                                 .asValidator(context),
                           ),
                         ),
@@ -216,7 +218,7 @@ class _Accountsetup1CopyWidgetState extends State<Accountsetup1CopyWidget> {
                           padding: EdgeInsetsDirectional.fromSTEB(
                               8.0, 0.0, 8.0, 0.0),
                           child: TextFormField(
-                            controller: _model.textController2,
+                            controller: _model.phoneNumberController,
                             autofocus: true,
                             obscureText: false,
                             decoration: InputDecoration(
@@ -260,7 +262,7 @@ class _Accountsetup1CopyWidgetState extends State<Accountsetup1CopyWidget> {
                               filled: true,
                             ),
                             style: FlutterFlowTheme.of(context).bodyMedium,
-                            validator: _model.textController2Validator
+                            validator: _model.phoneNumberControllerValidator
                                 .asValidator(context),
                           ),
                         ),
@@ -351,9 +353,9 @@ class _Accountsetup1CopyWidgetState extends State<Accountsetup1CopyWidget> {
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   8.0, 8.0, 8.0, 8.0),
                               child: TextFormField(
-                                controller: _model.textController3,
+                                controller: _model.passwordController,
                                 autofocus: true,
-                                obscureText: !_model.passwordVisibility1,
+                                obscureText: !_model.passwordVisibility,
                                 decoration: InputDecoration(
                                   labelText: 'Create Password',
                                   labelStyle: FlutterFlowTheme.of(context)
@@ -397,12 +399,12 @@ class _Accountsetup1CopyWidgetState extends State<Accountsetup1CopyWidget> {
                                   filled: true,
                                   suffixIcon: InkWell(
                                     onTap: () => setState(
-                                      () => _model.passwordVisibility1 =
-                                          !_model.passwordVisibility1,
+                                      () => _model.passwordVisibility =
+                                          !_model.passwordVisibility,
                                     ),
                                     focusNode: FocusNode(skipTraversal: true),
                                     child: Icon(
-                                      _model.passwordVisibility1
+                                      _model.passwordVisibility
                                           ? Icons.visibility_outlined
                                           : Icons.visibility_off_outlined,
                                       size: 22,
@@ -410,7 +412,7 @@ class _Accountsetup1CopyWidgetState extends State<Accountsetup1CopyWidget> {
                                   ),
                                 ),
                                 style: FlutterFlowTheme.of(context).bodyMedium,
-                                validator: _model.textController3Validator
+                                validator: _model.passwordControllerValidator
                                     .asValidator(context),
                               ),
                             ),
@@ -418,9 +420,9 @@ class _Accountsetup1CopyWidgetState extends State<Accountsetup1CopyWidget> {
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   8.0, 8.0, 8.0, 0.0),
                               child: TextFormField(
-                                controller: _model.textController4,
+                                controller: _model.confirmController,
                                 autofocus: true,
-                                obscureText: !_model.passwordVisibility2,
+                                obscureText: !_model.confirmVisibility,
                                 decoration: InputDecoration(
                                   labelText: 'Confirm Password',
                                   labelStyle: FlutterFlowTheme.of(context)
@@ -464,12 +466,12 @@ class _Accountsetup1CopyWidgetState extends State<Accountsetup1CopyWidget> {
                                   filled: true,
                                   suffixIcon: InkWell(
                                     onTap: () => setState(
-                                      () => _model.passwordVisibility2 =
-                                          !_model.passwordVisibility2,
+                                      () => _model.confirmVisibility =
+                                          !_model.confirmVisibility,
                                     ),
                                     focusNode: FocusNode(skipTraversal: true),
                                     child: Icon(
-                                      _model.passwordVisibility2
+                                      _model.confirmVisibility
                                           ? Icons.visibility_outlined
                                           : Icons.visibility_off_outlined,
                                       size: 22,
@@ -477,7 +479,7 @@ class _Accountsetup1CopyWidgetState extends State<Accountsetup1CopyWidget> {
                                   ),
                                 ),
                                 style: FlutterFlowTheme.of(context).bodyMedium,
-                                validator: _model.textController4Validator
+                                validator: _model.confirmControllerValidator
                                     .asValidator(context),
                               ),
                             ),
@@ -566,13 +568,53 @@ class _Accountsetup1CopyWidgetState extends State<Accountsetup1CopyWidget> {
                 ),
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(8.0),
-                    child: Image.asset(
-                      'assets/images/Next_Bubble_Button_130pt.png',
-                      width: 300.0,
-                      height: 70.0,
-                      fit: BoxFit.contain,
+                  child: InkWell(
+                    splashColor: Colors.transparent,
+                    focusColor: Colors.transparent,
+                    hoverColor: Colors.transparent,
+                    highlightColor: Colors.transparent,
+                    onTap: () async {
+                      GoRouter.of(context).prepareAuthEvent();
+                      if (_model.passwordController.text !=
+                          _model.confirmController.text) {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(
+                            content: Text(
+                              'Passwords don\'t match!',
+                            ),
+                          ),
+                        );
+                        return;
+                      }
+
+                      final user = await authManager.createAccountWithEmail(
+                        context,
+                        _model.emailController.text,
+                        _model.passwordController.text,
+                      );
+                      if (user == null) {
+                        return;
+                      }
+
+                      final usersCreateData = createUsersRecordData(
+                        email: _model.emailController.text,
+                        phoneNumber: _model.phoneNumberController.text,
+                      );
+                      await UsersRecord.collection
+                          .doc(user.uid)
+                          .update(usersCreateData);
+
+                      context.pushNamedAuth(
+                          'Accountsetup2Copy', context.mounted);
+                    },
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(8.0),
+                      child: Image.asset(
+                        'assets/images/Next_Bubble_Button_130pt.png',
+                        width: 300.0,
+                        height: 70.0,
+                        fit: BoxFit.contain,
+                      ),
                     ),
                   ),
                 ),
