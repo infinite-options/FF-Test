@@ -4,26 +4,27 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'account_setup_create_model.dart';
-export 'account_setup_create_model.dart';
+import 'account_setup_create_old_model.dart';
+export 'account_setup_create_old_model.dart';
 
-class AccountSetupCreateWidget extends StatefulWidget {
-  const AccountSetupCreateWidget({Key? key}) : super(key: key);
+class AccountSetupCreateOldWidget extends StatefulWidget {
+  const AccountSetupCreateOldWidget({Key? key}) : super(key: key);
 
   @override
-  _AccountSetupCreateWidgetState createState() =>
-      _AccountSetupCreateWidgetState();
+  _AccountSetupCreateOldWidgetState createState() =>
+      _AccountSetupCreateOldWidgetState();
 }
 
-class _AccountSetupCreateWidgetState extends State<AccountSetupCreateWidget> {
-  late AccountSetupCreateModel _model;
+class _AccountSetupCreateOldWidgetState
+    extends State<AccountSetupCreateOldWidget> {
+  late AccountSetupCreateOldModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => AccountSetupCreateModel());
+    _model = createModel(context, () => AccountSetupCreateOldModel());
 
     _model.emailController ??= TextEditingController();
     _model.passwordController ??= TextEditingController();

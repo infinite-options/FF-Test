@@ -78,14 +78,14 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
       errorBuilder: (context, state) => appStateNotifier.loggedIn
-          ? TrailAccountPage2Widget()
+          ? AccountSetup2DetailsWidget()
           : MeetUpHomePageWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
           builder: (context, _) => appStateNotifier.loggedIn
-              ? TrailAccountPage2Widget()
+              ? AccountSetup2DetailsWidget()
               : MeetUpHomePageWidget(),
         ),
         FFRoute(
@@ -119,34 +119,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => OnboardingSlide1Widget(),
         ),
         FFRoute(
-          name: 'onboarding_slide2abhi',
-          path: '/onboardingSlide2abhi',
-          builder: (context, params) => OnboardingSlide2abhiWidget(),
-        ),
-        FFRoute(
-          name: 'onboarding_slide3abhi',
-          path: '/onboardingSlide3abhi',
-          builder: (context, params) => OnboardingSlide3abhiWidget(),
-        ),
-        FFRoute(
-          name: 'onboarding_slide4abhi',
-          path: '/onboardingSlide4abhi',
-          builder: (context, params) => OnboardingSlide4abhiWidget(),
-        ),
-        FFRoute(
           name: 'TrailAccountPage1',
           path: '/trailAccountPage1',
           builder: (context, params) => TrailAccountPage1Widget(),
-        ),
-        FFRoute(
-          name: 'Page2',
-          path: '/page2',
-          builder: (context, params) => Page2Widget(),
-        ),
-        FFRoute(
-          name: 'Page3',
-          path: '/page3',
-          builder: (context, params) => Page3Widget(),
         ),
         FFRoute(
           name: 'Page4',
@@ -394,11 +369,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => OnboardingSlide2Widget(),
         ),
         FFRoute(
-          name: 'onboarding_slide3old',
-          path: '/onboardingSlide3old',
-          builder: (context, params) => OnboardingSlide3oldWidget(),
-        ),
-        FFRoute(
           name: 'onboarding_slide4',
           path: '/onboardingSlide4',
           builder: (context, params) => OnboardingSlide4Widget(),
@@ -414,9 +384,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => TrailAccountPage3Widget(),
         ),
         FFRoute(
-          name: 'AccountSetup-Create',
-          path: '/accountSetupCreate',
-          builder: (context, params) => AccountSetupCreateWidget(),
+          name: 'AccountSetup-Create-old',
+          path: '/accountSetupCreateOld',
+          builder: (context, params) => AccountSetupCreateOldWidget(),
         ),
         FFRoute(
           name: 'AccountSetup-Login',
@@ -424,19 +394,14 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => AccountSetupLoginWidget(),
         ),
         FFRoute(
-          name: 'onboarding_slide3Copy',
-          path: '/onboardingSlide3Copy',
-          builder: (context, params) => OnboardingSlide3CopyWidget(),
-        ),
-        FFRoute(
           name: 'onboarding_slide3',
           path: '/onboardingSlide3',
           builder: (context, params) => OnboardingSlide3Widget(),
         ),
         FFRoute(
-          name: 'Accountsetup2Copy',
-          path: '/accountsetup2Copy',
-          builder: (context, params) => Accountsetup2CopyWidget(),
+          name: 'AccountSetup1-Profile',
+          path: '/accountSetup1Profile',
+          builder: (context, params) => AccountSetup1ProfileWidget(),
         ),
         FFRoute(
           name: 'Accountsetup3Copy',
@@ -444,19 +409,19 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => Accountsetup3CopyWidget(),
         ),
         FFRoute(
-          name: 'Accountsetup1Copy',
-          path: '/accountsetup1Copy',
-          builder: (context, params) => Accountsetup1CopyWidget(),
+          name: 'AccountSetup-Create',
+          path: '/accountSetupCreate',
+          builder: (context, params) => AccountSetupCreateWidget(),
         ),
         FFRoute(
-          name: 'Accountsetup2CopyExtra',
-          path: '/accountsetup2CopyExtra',
-          builder: (context, params) => Accountsetup2CopyExtraWidget(),
+          name: 'AccountSetup2-Details',
+          path: '/accountSetup2Details',
+          builder: (context, params) => AccountSetup2DetailsWidget(),
         ),
         FFRoute(
-          name: 'Accountsetup2aCopy',
-          path: '/accountsetup2aCopy',
-          builder: (context, params) => Accountsetup2aCopyWidget(),
+          name: 'AccountSetup3-Interests',
+          path: '/accountSetup3Interests',
+          builder: (context, params) => AccountSetup3InterestsWidget(),
         ),
         FFRoute(
           name: 'Accountsetup4aCopy',

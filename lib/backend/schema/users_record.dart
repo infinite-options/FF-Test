@@ -94,6 +94,16 @@ class UsersRecord extends FirestoreRecord {
   String get zip => _zip ?? '';
   bool hasZip() => _zip != null;
 
+  // "profile_bio" field.
+  String? _profileBio;
+  String get profileBio => _profileBio ?? '';
+  bool hasProfileBio() => _profileBio != null;
+
+  // "sign" field.
+  String? _sign;
+  String get sign => _sign ?? '';
+  bool hasSign() => _sign != null;
+
   void _initializeFields() {
     _email = snapshotData['email'] as String?;
     _displayName = snapshotData['display_name'] as String?;
@@ -102,7 +112,7 @@ class UsersRecord extends FirestoreRecord {
     _createdTime = snapshotData['created_time'] as DateTime?;
     _phoneNumber = snapshotData['phone_number'] as String?;
     _videoUrl = snapshotData['video_url'] as String?;
-    _age = snapshotData['age'] as int?;
+    _age = castToType<int>(snapshotData['age']);
     _fullName = snapshotData['full_name'] as String?;
     _userInterests = getDataList(snapshotData['user_interests']);
     _gender = snapshotData['gender'] as String?;
@@ -111,6 +121,8 @@ class UsersRecord extends FirestoreRecord {
     _state = snapshotData['state'] as String?;
     _country = snapshotData['country'] as String?;
     _zip = snapshotData['zip'] as String?;
+    _profileBio = snapshotData['profile_bio'] as String?;
+    _sign = snapshotData['sign'] as String?;
   }
 
   static CollectionReference get collection =>
@@ -162,6 +174,8 @@ Map<String, dynamic> createUsersRecordData({
   String? state,
   String? country,
   String? zip,
+  String? profileBio,
+  String? sign,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
@@ -180,6 +194,8 @@ Map<String, dynamic> createUsersRecordData({
       'state': state,
       'country': country,
       'zip': zip,
+      'profile_bio': profileBio,
+      'sign': sign,
     }.withoutNulls,
   );
 

@@ -82,36 +82,40 @@ String getStaticMapImageURL(
   final finalZoom = zoom.clamp(0, 22).round();
   final image = StaticImage(apiKey: apiKey);
   if (markerColor == null && (markerURL == null || markerURL.trim().isEmpty)) {
-    return image.getStaticUrlWithoutMarker(
-      center: finalLocation,
-      style: mapStyle,
-      width: width.round(),
-      height: height.round(),
-      zoomLevel: finalZoom,
-      bearing: finalRotation,
-      pitch: finalTilt,
-    );
+    return image
+        .getStaticUrlWithoutMarker(
+          center: finalLocation,
+          style: mapStyle,
+          width: width.round(),
+          height: height.round(),
+          zoomLevel: finalZoom,
+          bearing: finalRotation,
+          pitch: finalTilt,
+        )
+        .toString();
   } else {
-    return image.getStaticUrlWithMarker(
-      marker: markerURL == null || markerURL.trim().isEmpty
-          ? MapBoxMarker(
-              markerColor: RgbColor(
-                markerColor!.red,
-                markerColor.green,
-                markerColor.blue,
-              ),
-              markerLetter: MakiIcons.circle.value,
-              markerSize: MarkerSize.MEDIUM,
-            )
-          : null,
-      markerUrl: markerURL,
-      center: finalLocation,
-      style: mapStyle,
-      width: width.round(),
-      height: height.round(),
-      zoomLevel: finalZoom,
-      bearing: finalRotation,
-      pitch: finalTilt,
-    );
+    return image
+        .getStaticUrlWithMarker(
+          marker: markerURL == null || markerURL.trim().isEmpty
+              ? MapBoxMarker(
+                  markerColor: RgbColor(
+                    markerColor!.red,
+                    markerColor.green,
+                    markerColor.blue,
+                  ),
+                  markerLetter: MakiIcons.circle.value,
+                  markerSize: MarkerSize.MEDIUM,
+                )
+              : null,
+          markerUrl: markerURL,
+          center: finalLocation,
+          style: mapStyle,
+          width: width.round(),
+          height: height.round(),
+          zoomLevel: finalZoom,
+          bearing: finalRotation,
+          pitch: finalTilt,
+        )
+        .toString();
   }
 }

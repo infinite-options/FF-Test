@@ -7,26 +7,26 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'accountsetup1_copy_model.dart';
-export 'accountsetup1_copy_model.dart';
+import 'account_setup_create_model.dart';
+export 'account_setup_create_model.dart';
 
-class Accountsetup1CopyWidget extends StatefulWidget {
-  const Accountsetup1CopyWidget({Key? key}) : super(key: key);
+class AccountSetupCreateWidget extends StatefulWidget {
+  const AccountSetupCreateWidget({Key? key}) : super(key: key);
 
   @override
-  _Accountsetup1CopyWidgetState createState() =>
-      _Accountsetup1CopyWidgetState();
+  _AccountSetupCreateWidgetState createState() =>
+      _AccountSetupCreateWidgetState();
 }
 
-class _Accountsetup1CopyWidgetState extends State<Accountsetup1CopyWidget> {
-  late Accountsetup1CopyModel _model;
+class _AccountSetupCreateWidgetState extends State<AccountSetupCreateWidget> {
+  late AccountSetupCreateModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => Accountsetup1CopyModel());
+    _model = createModel(context, () => AccountSetupCreateModel());
 
     _model.emailController ??= TextEditingController();
     _model.phoneNumberController ??= TextEditingController();
@@ -596,16 +596,15 @@ class _Accountsetup1CopyWidgetState extends State<Accountsetup1CopyWidget> {
                         return;
                       }
 
-                      final usersCreateData = createUsersRecordData(
-                        email: _model.emailController.text,
-                        phoneNumber: _model.phoneNumberController.text,
-                      );
                       await UsersRecord.collection
                           .doc(user.uid)
-                          .update(usersCreateData);
+                          .update(createUsersRecordData(
+                            email: _model.emailController.text,
+                            phoneNumber: _model.phoneNumberController.text,
+                          ));
 
-                      context.pushNamedAuth(
-                          'Accountsetup2Copy', context.mounted);
+                      context.goNamedAuth(
+                          'AccountSetup2-Details', context.mounted);
                     },
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(8.0),

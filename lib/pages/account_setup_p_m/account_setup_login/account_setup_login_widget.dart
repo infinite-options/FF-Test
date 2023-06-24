@@ -101,17 +101,31 @@ class _AccountSetupLoginWidgetState extends State<AccountSetupLoginWidget> {
                           children: [
                             Align(
                               alignment: AlignmentDirectional(0.06, -0.45),
-                              child: Text(
-                                'meet me up',
-                                textAlign: TextAlign.center,
-                                style: FlutterFlowTheme.of(context)
-                                    .bodyMedium
-                                    .override(
-                                      fontFamily: 'Inria Sans',
-                                      color: Color(0xFFE4423F),
-                                      fontSize: 36.0,
-                                      fontWeight: FontWeight.bold,
-                                    ),
+                              child: InkWell(
+                                splashColor: Colors.transparent,
+                                focusColor: Colors.transparent,
+                                hoverColor: Colors.transparent,
+                                highlightColor: Colors.transparent,
+                                onTap: () async {
+                                  GoRouter.of(context).prepareAuthEvent();
+                                  await authManager.signOut();
+                                  GoRouter.of(context).clearRedirectLocation();
+
+                                  context.goNamedAuth(
+                                      'MeetUpHomePage', context.mounted);
+                                },
+                                child: Text(
+                                  'meet me up',
+                                  textAlign: TextAlign.center,
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyMedium
+                                      .override(
+                                        fontFamily: 'Inria Sans',
+                                        color: Color(0xFFE4423F),
+                                        fontSize: 36.0,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                ),
                               ),
                             ),
                           ],
@@ -298,7 +312,7 @@ class _AccountSetupLoginWidgetState extends State<AccountSetupLoginWidget> {
                                   }
 
                                   context.goNamedAuth(
-                                      'TrailAccountPage2', context.mounted);
+                                      'AccountSetup2-Details', context.mounted);
                                 },
                                 text: 'Login',
                                 options: FFButtonOptions(
@@ -377,7 +391,7 @@ class _AccountSetupLoginWidgetState extends State<AccountSetupLoginWidget> {
                             children: [
                               FFButtonWidget(
                                 onPressed: () async {
-                                  context.pushNamed('Accountsetup1Copy');
+                                  context.pushNamed('AccountSetup-Create-old');
                                 },
                                 text: 'Create Account',
                                 options: FFButtonOptions(

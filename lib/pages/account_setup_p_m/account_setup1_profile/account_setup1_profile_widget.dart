@@ -7,26 +7,27 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'accountsetup2_copy_model.dart';
-export 'accountsetup2_copy_model.dart';
+import 'account_setup1_profile_model.dart';
+export 'account_setup1_profile_model.dart';
 
-class Accountsetup2CopyWidget extends StatefulWidget {
-  const Accountsetup2CopyWidget({Key? key}) : super(key: key);
+class AccountSetup1ProfileWidget extends StatefulWidget {
+  const AccountSetup1ProfileWidget({Key? key}) : super(key: key);
 
   @override
-  _Accountsetup2CopyWidgetState createState() =>
-      _Accountsetup2CopyWidgetState();
+  _AccountSetup1ProfileWidgetState createState() =>
+      _AccountSetup1ProfileWidgetState();
 }
 
-class _Accountsetup2CopyWidgetState extends State<Accountsetup2CopyWidget> {
-  late Accountsetup2CopyModel _model;
+class _AccountSetup1ProfileWidgetState
+    extends State<AccountSetup1ProfileWidget> {
+  late AccountSetup1ProfileModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => Accountsetup2CopyModel());
+    _model = createModel(context, () => AccountSetup1ProfileModel());
 
     _model.textController1 ??= TextEditingController();
     _model.textController2 ??= TextEditingController();
@@ -462,15 +463,16 @@ class _Accountsetup2CopyWidgetState extends State<Accountsetup2CopyWidget> {
                     hoverColor: Colors.transparent,
                     highlightColor: Colors.transparent,
                     onTap: () async {
-                      final usersUpdateData = createUsersRecordData(
+                      await currentUserReference!.update(createUsersRecordData(
                         fullName: _model.textController1.text,
                         age: int.tryParse(_model.textController2.text),
                         gender: _model.textController3.text,
                         suburb: _model.textController4.text,
-                      );
-                      await currentUserReference!.update(usersUpdateData);
+                        email: '',
+                        profileBio: _model.textController5.text,
+                      ));
 
-                      context.pushNamed('Accountsetup2CopyExtra');
+                      context.pushNamed('AccountSetup2-Details');
                     },
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(8.0),

@@ -155,9 +155,9 @@ class _TrailAccountPage2WidgetState extends State<TrailAccountPage2Widget> {
                                           borderWidth: 1.0,
                                           buttonSize: 100.0,
                                           icon: Icon(
-                                            FFIcons.knextArrow,
+                                            Icons.arrow_circle_up,
                                             color: Color(0xFFE4423F),
-                                            size: 90.0,
+                                            size: 60.0,
                                           ),
                                           onPressed: () {
                                             print('IconButton pressed ...');
@@ -227,9 +227,9 @@ class _TrailAccountPage2WidgetState extends State<TrailAccountPage2Widget> {
                                         borderWidth: 1.0,
                                         buttonSize: 120.0,
                                         icon: Icon(
-                                          FFIcons.klikeArrow,
+                                          Icons.arrow_circle_down,
                                           color: Color(0xFFBFE98C),
-                                          size: 90.0,
+                                          size: 60.0,
                                         ),
                                         onPressed: () {
                                           print('IconButton pressed ...');
@@ -315,8 +315,9 @@ class _TrailAccountPage2WidgetState extends State<TrailAccountPage2Widget> {
                                         ),
                                       ),
                                       FFButtonWidget(
-                                        onPressed: () {
-                                          print('Button pressed ...');
+                                        onPressed: () async {
+                                          context.pushNamed(
+                                              'AccountSetup1-Profile');
                                         },
                                         text: '<Interest>',
                                         options: FFButtonOptions(

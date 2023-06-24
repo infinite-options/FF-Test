@@ -10,7 +10,6 @@ class FFIcons {
   static const String _lockIconFamily = 'LockIcon';
   static const String _personIconFamily = 'PersonIcon';
   static const String _mapIconFamily = 'MapIcon';
-  static const String _pMFlutterIconsFamily = 'PMFlutterIcons';
 
   // MyFlutterApp
   static const IconData kgenderIconCharcoal =
@@ -50,10 +49,4 @@ class FFIcons {
 
   // Map_icon
   static const IconData k776 = IconData(0xe800, fontFamily: _mapIconFamily);
-
-  // PMFlutterIcons
-  static const IconData klikeArrow =
-      IconData(0xe800, fontFamily: _pMFlutterIconsFamily);
-  static const IconData knextArrow =
-      IconData(0xe801, fontFamily: _pMFlutterIconsFamily);
 }

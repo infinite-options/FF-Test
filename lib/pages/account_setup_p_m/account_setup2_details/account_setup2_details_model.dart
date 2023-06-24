@@ -1,14 +1,17 @@
+import '/auth/firebase_auth/auth_util.dart';
+import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_static_map.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/lat_lng.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mapbox_search/mapbox_search.dart';
 import 'package:provider/provider.dart';
 
-class Accountsetup2CopyExtraModel extends FlutterFlowModel {
+class AccountSetup2DetailsModel extends FlutterFlowModel {
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();
@@ -30,6 +33,9 @@ class Accountsetup2CopyExtraModel extends FlutterFlowModel {
   // State field(s) for TextField widget.
   TextEditingController? textController6;
   String? Function(BuildContext, String?)? textController6Validator;
+  // State field(s) for TextField widget.
+  TextEditingController? textController7;
+  String? Function(BuildContext, String?)? textController7Validator;
 
   /// Initialization and disposal methods.
 
@@ -43,10 +49,10 @@ class Accountsetup2CopyExtraModel extends FlutterFlowModel {
     textController4?.dispose();
     textController5?.dispose();
     textController6?.dispose();
+    textController7?.dispose();
   }
 
   /// Action blocks are added here.
 
   /// Additional helper methods are added here.
-
 }
